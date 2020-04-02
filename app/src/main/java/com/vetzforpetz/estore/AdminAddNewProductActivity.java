@@ -94,7 +94,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity
             InputProductImage.setImageURI(ImageUri);
         }
     }
-
+    //validate if user has entered the required details
     private void ValidateProductData()
     {
         Description = InputProductDescription.getText().toString();
