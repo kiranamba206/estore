@@ -14,4 +14,15 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <string name="LOGIN_SUCCESS">Logged in Successfully...</string>
+    <string name="INCORRECT_PASSWORD">Password is incorrect.</string>
+    <string name="LOGIN_ADMIN_TITLE">Login Admin</string>
+    <string name="LOGIN_TITLE">Login</string>
+    <string name="ENTER_PHONE_NUMBER">Please enter your phone number...</string>
+    <string name="ENTER_PASSWORD">Please enter your password...</string>
+    <string name="LOGIN_ACCOUNT_TITLE">Login Account</string>
+    <string name="VALIDATE_CREDENTIALS">Validating the credentials.</string>
+    <string name="WELCOME_ADMIN">Welcome Admin, you are logged in Successfully...</string>
+
 </resources>
