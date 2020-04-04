@@ -24,6 +24,8 @@ import com.rey.material.widget.CheckBox;
 
 import io.paperdb.Paper;
 
+import static android.widget.Toast.*;
+
 public class LoginActivity extends AppCompatActivity
 {
     private EditText InputPhoneNumber, InputPassword;
@@ -34,13 +36,11 @@ public class LoginActivity extends AppCompatActivity
     private String parentDbName = "Users";
     private CheckBox chkBoxRememberMe;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         LoginButton = findViewById(R.id.login_btn);
         InputPassword = findViewById(R.id.login_password_input);
@@ -48,7 +48,6 @@ public class LoginActivity extends AppCompatActivity
         AdminLink = findViewById(R.id.admin_panel_link);
         NotAdminLink = findViewById(R.id.not_admin_panel_link);
         loadingBar = new ProgressDialog(this);
-
 
         chkBoxRememberMe = findViewById(R.id.remember_me_chkb);
 
@@ -69,7 +68,7 @@ public class LoginActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                LoginButton.setText("Login Admin");
+                LoginButton.setText(R.string.LOGIN_ADMIN_TITLE);
                 AdminLink.setVisibility(View.INVISIBLE);
                 NotAdminLink.setVisibility(View.VISIBLE);
                 parentDbName = "Admins";
@@ -80,7 +79,7 @@ public class LoginActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                LoginButton.setText("Login");
+                LoginButton.setText(R.string.LOGIN_TITLE);
                 AdminLink.setVisibility(View.VISIBLE);
                 NotAdminLink.setVisibility(View.INVISIBLE);
                 parentDbName = "Users";
@@ -95,16 +94,16 @@ public class LoginActivity extends AppCompatActivity
 
         if (TextUtils.isEmpty(phone))
         {
-            Toast.makeText(this, "Please enter your phone number...", Toast.LENGTH_SHORT).show();
+            makeText(this, R.string.ENTER_PHONE_NUMBER, LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(password))
         {
-            Toast.makeText(this, "Please enter your password...", Toast.LENGTH_SHORT).show();
+            makeText(this, R.string.ENTER_PASSWORD, LENGTH_SHORT).show();
         }
         else
         {
-            loadingBar.setTitle("Login Account");
-            loadingBar.setMessage("Validating the credentials.");
+            loadingBar.setTitle(getString(R.string.LOGIN_ACCOUNT_TITLE));
+            loadingBar.setMessage(getString(R.string.VALIDATE_CREDENTIALS));
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -137,7 +136,7 @@ public class LoginActivity extends AppCompatActivity
                         {
                             if (parentDbName.equals("Admins"))
                             {
-                                Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                makeText(LoginActivity.this, R.string.WELCOME_ADMIN, LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
@@ -146,7 +145,7 @@ public class LoginActivity extends AppCompatActivity
                             }
                             else if (parentDbName.equals("Users"))
                             {
-                                Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                makeText(LoginActivity.this, R.string.LOGIN_SUCCESS, LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
@@ -158,13 +157,13 @@ public class LoginActivity extends AppCompatActivity
                         else
                         {
                             loadingBar.dismiss();
-                            Toast.makeText(LoginActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
+                            makeText(LoginActivity.this, R.string.INCORRECT_PASSWORD, LENGTH_SHORT).show();
                         }
                     }
                 }
                 else
                 {
-                    Toast.makeText(LoginActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();
+                    makeText(LoginActivity.this, "Account with this " + phone + " number do not exists.", LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }
