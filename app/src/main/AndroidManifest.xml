@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.vetzforpetz.estore.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data android:mimeType="message/rfc822"/>
+            </intent-filter>
+        </activity>
         <activity android:name="com.vetzforpetz.estore.ProductListActivity" />
         <activity android:name="com.vetzforpetz.estore.SearchProductsActivity" />
         <activity android:name="com.vetzforpetz.estore.ResetPasswordActivity" />
@@ -27,14 +36,7 @@
         <activity android:name="com.vetzforpetz.estore.AdminAddNewProductActivity" />
         <activity android:name="com.vetzforpetz.estore.RegisterActivity" />
         <activity android:name="com.vetzforpetz.estore.LoginActivity" />
-        <activity android:name="com.vetzforpetz.estore.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-                <data android:mimeType="message/rfc822"/>
-            </intent-filter>
-        </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
