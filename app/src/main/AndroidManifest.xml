@@ -28,9 +28,10 @@
         <activity android:name="com.vetzforpetz.estore.RegisterActivity" />
         <activity android:name="com.vetzforpetz.estore.LoginActivity" />
         <activity android:name="com.vetzforpetz.estore.MainActivity">
-            <intent-filter>
+            <intent-filter
+                android:icon="@drawable/icon"
+                android:label="@VetzForPetz">
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
                 <data android:mimeType="message/rfc822"/>
             </intent-filter>
