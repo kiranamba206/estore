@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class AdminCategoryActivity extends AppCompatActivity
 {
 
-    private ImageView dogCategory, catCategory, vetServices, customFood, petAccessories;
+    private LinearLayout  dogCategory, catCategory, vetServices, customFood, petAccessories;
 
     private Button LogoutBtn, CheckOrdersBtn, updateProductsBtn;
 
@@ -68,11 +68,11 @@ public class AdminCategoryActivity extends AppCompatActivity
             });
         }
 
-        dogCategory = findViewById(R.id.t_dogCategory);
-        catCategory = findViewById(R.id.t_catCategory);
-        vetServices = findViewById(R.id.t_vetServices);
-        customFood = findViewById(R.id.t_custumFood);
-        petAccessories = findViewById(R.id.t_accessories);
+        dogCategory = findViewById(R.id.dog_products_category_layout);
+        catCategory = findViewById(R.id.cat_products_category_layout);
+        vetServices = findViewById(R.id.vet_services_category_layout);
+        customFood = findViewById(R.id.customized_food_category_layout);
+        petAccessories = findViewById(R.id.accessories_category_layout);
 
 
         dogCategory.setOnClickListener(new View.OnClickListener() {

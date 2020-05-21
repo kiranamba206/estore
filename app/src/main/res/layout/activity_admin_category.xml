@@ -20,44 +20,47 @@
         />
 
     <LinearLayout
-        android:id="@+id/linear1_category_layout_1"
+        android:id="@+id/dog_products_category_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/slogan_category"
-        android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/t_dogCategory"
             android:layout_width="100dp"
             android:layout_height="80dp"
+            android:background="#FFFFFF"
             android:src="@drawable/dog" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Dog Products"
             android:textAlignment="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            />
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear1_category_layout_2"
-        android:layout_below="@+id/linear1_category_layout_1"
+        android:id="@+id/cat_products_category_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_below="@+id/dog_products_category_layout"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/t_catCategory"
@@ -70,54 +73,54 @@
             android:layout_height="wrap_content"
             android:text="Cat Products"
             android:textAlignment="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            />
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear1_category_layout_3"
-        android:layout_below="@+id/linear1_category_layout_2"
+        android:id="@+id/customized_food_category_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_below="@+id/cat_products_category_layout"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/t_custumFood"
             android:layout_width="99dp"
             android:layout_height="80dp"
             android:src="@drawable/freshfood" />
-            />
+        />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Customized Food"
             android:textAlignment="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            />
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear1_category_layout_4"
-        android:layout_below="@+id/linear1_category_layout_3"
+        android:id="@+id/vet_services_category_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_below="@+id/customized_food_category_layout"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/t_vetServices"
@@ -130,23 +133,23 @@
             android:layout_height="wrap_content"
             android:text="Vet Services"
             android:textAlignment="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            />
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear2_category_layout_5"
-        android:layout_below="@+id/linear1_category_layout_4"
+        android:id="@+id/accessories_category_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_below="@+id/vet_services_category_layout"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/t_accessories"
@@ -159,10 +162,9 @@
             android:layout_height="wrap_content"
             android:text="Accessories"
             android:textAlignment="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            />
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
