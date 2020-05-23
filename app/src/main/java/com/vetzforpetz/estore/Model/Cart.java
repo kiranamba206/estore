@@ -1,17 +1,26 @@
 package com.vetzforpetz.estore.Model;
 
 public class Cart {
-    private String pid, pname, price, quantity, discount;
+    private String pid, pname, price, quantity, discount, customMessage;
 
     public Cart() {
     }
 
-    public Cart(String pid, String pname, String price, String quantity, String discount) {
+    public Cart(String pid, String pname, String price, String quantity, String discount, String customMessage) {
         this.pid = pid;
         this.pname = pname;
         this.price = price;
         this.quantity = quantity;
         this.discount = discount;
+        this.customMessage = customMessage;
+    }
+
+    public String getCustomMessage() {
+        return customMessage;
+    }
+
+    public void setCustomMessage(String customMessage) {
+        this.customMessage = customMessage;
     }
 
     public String getPid() {

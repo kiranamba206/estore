@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,13 +32,16 @@ import java.util.HashMap;
 
 public class ProductDetailsActivity extends AppCompatActivity {
 
+    private String TAG = "ProductDetailsActivity";
     private Button addToCartButton;
     private ImageView productImage;
-    private ElegantNumberButton numberButton;
+    private ElegantNumberButton productQuantityButton;
     private TextView productPrice, productDescription, productName;
+    private EditText  customMessage;
     private String productID = "", state = "Normal";
-
+    private String preLoadedQuantity = "";
     private ProgressDialog loadingBar;
+    private boolean updateAction = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -45,18 +50,33 @@ public class ProductDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product_details);
 
         productID = getIntent().getStringExtra("pid");
+        preLoadedQuantity = getIntent().getStringExtra("qty");
+        updateAction  = getIntent().getBooleanExtra("updateAction", false);
+
+        String customMessageTemp = getIntent().getStringExtra("custom_message");
+        Log.i(TAG,"onCreate preLoading qty =" + preLoadedQuantity);
 
         addToCartButton = findViewById(R.id.pd_add_to_cart_button);
-        numberButton = findViewById(R.id.number_btn);
+        productQuantityButton = findViewById(R.id.quantity_button);
         productImage = findViewById(R.id.product_image_details);
         productName = findViewById(R.id.product_name_details);
         productDescription = findViewById(R.id.product_description_details);
         productPrice = findViewById(R.id.product_price_details);
-
+        customMessage = (EditText)findViewById(R.id.product_custom_message);
+        customMessage.setVisibility(View.INVISIBLE);
+        if (customMessageTemp != null && !customMessageTemp.isEmpty()) {
+            Log.i(TAG," preloading customMessageTemp =" + customMessageTemp);
+            customMessage.setText(customMessageTemp);
+        }
         loadingBar = new ProgressDialog(this);
 
         getProductDetails(productID);
-
+        if (updateAction) {
+            // we are updating the cart, so updating the text of the button to say Update
+            addToCartButton.setText("UPDATE CART");
+        } else {
+            addToCartButton.setText("ADD TO CART");
+        }
 
         addToCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,8 +127,11 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("price", productPrice.getText().toString());
         cartMap.put("date", saveCurrentDate);
         cartMap.put("time", saveCurrentTime);
-        cartMap.put("quantity", numberButton.getNumber());
+        cartMap.put("quantity", productQuantityButton.getNumber());
         cartMap.put("discount", "");
+        if (!customMessage.getText().toString().isEmpty()) {
+            cartMap.put("customMessage", customMessage.getText().toString());
+        }
 
         cartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone())
                 .child("Products").child(productID)
@@ -169,6 +192,13 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     productPrice.setText(products.getPrice());
                     productDescription.setText(products.getDescription());
                     Picasso.get().load(products.getImage()).into(productImage);
+                    if (preLoadedQuantity != null && !preLoadedQuantity.isEmpty()) {
+                        productQuantityButton.setNumber(preLoadedQuantity);
+                    }
+                    if (products.getCategory().equals("Custom Food")) {
+                        customMessage.setVisibility(View.VISIBLE);
+
+                    }
                 }
             }
 

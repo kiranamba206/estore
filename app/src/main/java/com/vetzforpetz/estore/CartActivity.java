@@ -9,6 +9,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class CartActivity extends AppCompatActivity {
-
+    private String TAG = "CartActivity";
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
 
@@ -62,6 +63,8 @@ public class CartActivity extends AppCompatActivity {
             {
                 txtTotalAmount.setText("Total Price : " + overTotalPrice + " Rs");
 
+                Log.v(TAG, "NextProcessBtn:setOnClickListener: Total price = " + overTotalPrice);
+
                 Intent intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
                 intent.putExtra("Total Price", String.valueOf(overTotalPrice));
                 startActivity(intent);
@@ -75,7 +78,7 @@ public class CartActivity extends AppCompatActivity {
     protected void onStart()
     {
         super.onStart();
-
+        Log.v(TAG, "onStart starting");
         CheckOrderState();
 
 
@@ -93,6 +96,8 @@ public class CartActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model)
             {
+
+                Log.v(TAG, "onBindViewHolder " + model.toString());
                 holder.txtProductQuantity.setText( "Quantity : " + model.getQuantity());
                 holder.txtProductPrice.setText(" Price : " + model.getPrice() + " Rs");
                 holder.txtProductName.setText("Product : " + model.getPname());
@@ -122,6 +127,14 @@ public class CartActivity extends AppCompatActivity {
                                 {
                                     Intent intent = new Intent(CartActivity.this, ProductDetailsActivity.class);
                                     intent.putExtra("pid", model.getPid());
+                                    intent.putExtra("qty", model.getQuantity());
+                                    intent.putExtra("updateAction", true);
+                                    Log.i(TAG, "Going into Edit, custom message = " + model.getCustomMessage());
+                                    if (model.getCustomMessage() != null && !model.getCustomMessage().isEmpty()) {
+                                        //Log.i(TAG, "custom message = " + model.getCustomMessage());
+                                        intent.putExtra("custom_message", model.getCustomMessage());
+                                    }
+
                                     startActivity(intent);
                                 }
                                 if (i == 1)
