@@ -254,9 +254,23 @@ public class HomeActivity extends AppCompatActivity
                 finish();
             }
         }
+        else if (id == R.id.nav_share) {
+            shareApp();
+        }
+        else if (id == R.id.nav_send) {
+            shareApp();
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void shareApp() {
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Vetz For Petz App");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hi,\n Please try the Vetz for Petz app to order your favourite vet products and accessories.\n https://play.google.com/store/apps/details?id=com.vetzforpetz.estore");
+        startActivity(Intent.createChooser(sharingIntent,"Share via"));
     }
 }
