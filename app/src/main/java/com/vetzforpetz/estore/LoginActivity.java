@@ -113,10 +113,12 @@ public class LoginActivity extends AppCompatActivity
 
     private void AllowAccessToAccount(final String phone, final String password)
     {
+
+        final Prevalent mPrevalent = Prevalent.getInstance();
         if(chkBoxRememberMe.isChecked())
         {
-            Paper.book().write(Prevalent.UserPhoneKey, phone);
-            Paper.book().write(Prevalent.UserPasswordKey, password);
+            Paper.book().write(mPrevalent.getUserPhoneKey(), phone);
+            Paper.book().write(mPrevalent.getUserPasswordKey(), password);
         }
 
         final DatabaseReference RootRef;
@@ -138,6 +140,7 @@ public class LoginActivity extends AppCompatActivity
                             {
                                 makeText(LoginActivity.this, R.string.WELCOME_ADMIN, LENGTH_SHORT).show();
                                 loadingBar.dismiss();
+                                mPrevalent.setCurrentOnlineUser(usersData);
 
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
                                 intent.putExtra("AppUser","Admin" );
@@ -150,7 +153,8 @@ public class LoginActivity extends AppCompatActivity
 
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 intent.putExtra("AppUser","User" );
-                                Prevalent.currentOnlineUser = usersData;
+                                mPrevalent.setCurrentOnlineUser(usersData);
+
                                 startActivity(intent);
                             }
                         }

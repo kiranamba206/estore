@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.vetzforpetz.estore.Model.Users;
 import com.vetzforpetz.estore.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -31,12 +32,15 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
 
     private String totalAmount = "";
 
+    private Prevalent mPrevalent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_final_order);
-
+        mPrevalent = Prevalent.getInstance();
+        Users currentUser = mPrevalent.getCurrentOnlineUser();
 
         totalAmount = getIntent().getStringExtra("Total Price");
         Toast.makeText(this, "Total Price =  $ " + totalAmount, Toast.LENGTH_SHORT).show();
@@ -48,6 +52,11 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         addressEditText = findViewById(R.id.shippment_address);
         cityEditText = findViewById(R.id.shippment_city);
 
+        //Preloading values from the user's settings
+        nameEditText.setText(currentUser.getName());
+        phoneEditText.setText(currentUser.getPhone());
+        addressEditText.setText(currentUser.getAddress());
+        // city is currently unavailable in the user's settings as of May 23rd 2020
 
         confirmOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +97,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
 
         final DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference()
                 .child("Orders")
-                .child(Prevalent.currentOnlineUser.getPhone());
+                .child(mPrevalent.getCurrentOnlineUser().getPhone());
 
         HashMap<String, Object> ordersMap = new HashMap<>();
         ordersMap.put("totalAmount", totalAmount);
@@ -109,7 +118,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference()
                             .child("Cart List")
                             .child("User View")
-                            .child(Prevalent.currentOnlineUser.getPhone())
+                            .child(mPrevalent.getCurrentOnlineUser().getPhone())
                             .removeValue()
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

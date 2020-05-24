@@ -2,21 +2,48 @@ package com.vetzforpetz.estore.Model;
 
 public class Users
 {
-    private String name, phone, password, image, address;
-
+    private String name, phone, password, image, address, city, email;
+    private boolean isLoggedIn = false;
     public Users()
     {
 
     }
 
-    public Users(String name, String phone, String password, String image, String address) {
+    public Users(String name, String phone, String password, String image, String address,
+                 String city, String email) {
         this.name = name;
         this.phone = phone;
         this.password = password;
         this.image = image;
         this.address = address;
+        this.email = email;
+        this.city = city;
+
     }
 
+    public boolean isLoggedIn() {
+        return isLoggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        isLoggedIn = loggedIn;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getName() {
         return name;

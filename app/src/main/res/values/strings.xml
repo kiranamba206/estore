@@ -24,5 +24,14 @@
     <string name="LOGIN_ACCOUNT_TITLE">Login Account</string>
     <string name="VALIDATE_CREDENTIALS">Validating the credentials.</string>
     <string name="WELCOME_ADMIN">Welcome Admin, you are logged in Successfully...</string>
+    <string name="settings_close">Close</string>
+    <string name="settings_update">Update</string>
+    <string name="change_profile_text">Change Profile</string>
+    <string name="settings_phone_number_hint">Phone Number...</string>
+    <string name="settings_full_name_hint">Full Name...</string>
+    <string name="settings_address_hint">Address...</string>
+    <string name="settings_city_name_hint">City Name</string>
+    <string name="settings_email_address_hint">Email Address</string>
+    <string name="settings_autofill_hints">Enter Email address</string>
 
 </resources>

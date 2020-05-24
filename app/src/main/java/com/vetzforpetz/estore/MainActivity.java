@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         String UserPhoneKey = Paper.book().read(Prevalent.UserPhoneKey);
         String UserPasswordKey = Paper.book().read(Prevalent.UserPasswordKey);
 
-        if (UserPhoneKey != "" && UserPasswordKey != "")
+        if (UserPhoneKey!= null && UserPasswordKey!= null && !UserPhoneKey.isEmpty()  && !UserPasswordKey.isEmpty())
         {
             if (!TextUtils.isEmpty(UserPhoneKey)  &&  !TextUtils.isEmpty(UserPasswordKey))
             {
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity
                             loadingBar.dismiss();
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                            Prevalent.currentOnlineUser = usersData;
+                            Prevalent.setCurrentOnlineUser(usersData);
                             startActivity(intent);
                         }
                         else

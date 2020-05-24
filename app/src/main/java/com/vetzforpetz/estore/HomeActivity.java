@@ -45,11 +45,13 @@ public class HomeActivity extends AppCompatActivity
     RecyclerView.LayoutManager layoutManager;
 
     private String type = "";
+    private Prevalent mPrevalent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        mPrevalent = Prevalent.getInstance();
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -95,8 +97,8 @@ public class HomeActivity extends AppCompatActivity
         CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_image);
 
         if (!type.equals("Admin")) {
-            userNameTextView.setText(Prevalent.currentOnlineUser.getName());
-            Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
+            userNameTextView.setText(mPrevalent.getCurrentOnlineUser().getName());
+            Picasso.get().load(mPrevalent.getCurrentOnlineUser().getImage()).placeholder(R.drawable.profile).into(profileImageView);
         }
 
         recyclerView = findViewById(R.id.recycler_menu);
@@ -154,8 +156,8 @@ public class HomeActivity extends AppCompatActivity
                     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
                     {
                         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
-                        ProductViewHolder holder = new ProductViewHolder(view);
-                        return holder;
+
+                        return new ProductViewHolder(view);
                     }
                 };
         recyclerView.setAdapter(adapter);
@@ -245,14 +247,14 @@ public class HomeActivity extends AppCompatActivity
 
         else if (id == R.id.nav_logout)
         {
-            if (!type.equals("Admin")) {
+
                 Paper.book().destroy();
 
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
-            }
+
         }
         else if (id == R.id.nav_share) {
             shareApp();

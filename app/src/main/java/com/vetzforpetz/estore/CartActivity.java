@@ -40,12 +40,14 @@ public class CartActivity extends AppCompatActivity {
 
     private int overTotalPrice = 0;
 
+    private Prevalent mPrevalent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
-
+        mPrevalent = Prevalent.getInstance();
 
         recyclerView = findViewById(R.id.cart_list);
         recyclerView.setHasFixedSize(true);
@@ -67,6 +69,7 @@ public class CartActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
                 intent.putExtra("Total Price", String.valueOf(overTotalPrice));
+
                 startActivity(intent);
                 finish();
             }
@@ -87,7 +90,8 @@ public class CartActivity extends AppCompatActivity {
         FirebaseRecyclerOptions<Cart> options =
                 new FirebaseRecyclerOptions.Builder<Cart>()
                         .setQuery(cartListRef.child("User View")
-                                .child(Prevalent.currentOnlineUser.getPhone())
+                                .child(mPrevalent.getCurrentOnlineUser().getPhone())
+
                                 .child("Products"), Cart.class)
                         .build();
 
@@ -101,9 +105,8 @@ public class CartActivity extends AppCompatActivity {
                 holder.txtProductQuantity.setText( "Quantity : " + model.getQuantity());
                 holder.txtProductPrice.setText(" Price : " + model.getPrice() + " Rs");
                 holder.txtProductName.setText("Product : " + model.getPname());
-
-                int oneTyprProductTPrice = ((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
-                overTotalPrice = overTotalPrice + oneTyprProductTPrice;
+                int oneTypeProductTPrice = ((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
+                overTotalPrice = overTotalPrice + oneTypeProductTPrice;
 
                 txtTotalAmount.setText("Total Price : " + overTotalPrice + " Rs");
 
@@ -140,7 +143,7 @@ public class CartActivity extends AppCompatActivity {
                                 if (i == 1)
                                 {
                                     cartListRef.child("User View")
-                                            .child(Prevalent.currentOnlineUser.getPhone())
+                                            .child(mPrevalent.getCurrentOnlineUser().getPhone())
                                             .child("Products")
                                             .child(model.getPid())
                                             .removeValue()
@@ -184,7 +187,7 @@ public class CartActivity extends AppCompatActivity {
     private void CheckOrderState()
     {
         DatabaseReference ordersRef;
-        ordersRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.currentOnlineUser.getPhone());
+        ordersRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(mPrevalent.getCurrentOnlineUser().getPhone());
 
         ordersRef.addValueEventListener(new ValueEventListener() {
             @Override

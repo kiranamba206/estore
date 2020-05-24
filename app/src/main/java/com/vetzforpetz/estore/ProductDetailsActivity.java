@@ -42,13 +42,14 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private String preLoadedQuantity = "";
     private ProgressDialog loadingBar;
     private boolean updateAction = false;
+    Prevalent mPrevalent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
-
+        mPrevalent = Prevalent.getInstance();
         productID = getIntent().getStringExtra("pid");
         preLoadedQuantity = getIntent().getStringExtra("qty");
         updateAction  = getIntent().getBooleanExtra("updateAction", false);
@@ -133,7 +134,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             cartMap.put("customMessage", customMessage.getText().toString());
         }
 
-        cartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone())
+        cartListRef.child("User View").child(mPrevalent.getCurrentOnlineUser().getPhone())
                 .child("Products").child(productID)
                 .updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -152,7 +153,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
                         if (task.isSuccessful())
                         {
-                            cartListRef.child("Admin View").child(Prevalent.currentOnlineUser.getPhone())
+                            cartListRef.child("Admin View").child(mPrevalent.getCurrentOnlineUser().getPhone())
                                     .child("Products").child(productID)
                                     .updateChildren(cartMap)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -212,7 +213,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private void CheckOrderState()
     {
         DatabaseReference ordersRef;
-        ordersRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.currentOnlineUser.getPhone());
+        ordersRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(mPrevalent.getCurrentOnlineUser().getPhone());
 
         ordersRef.addValueEventListener(new ValueEventListener() {
             @Override
