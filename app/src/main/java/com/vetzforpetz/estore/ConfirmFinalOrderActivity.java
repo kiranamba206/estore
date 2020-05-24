@@ -128,7 +128,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                                         sendEmail();
                                         Intent intent = new Intent(ConfirmFinalOrderActivity.this, HomeActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                        intent.putExtra("AppUser", "User");
+                                        //intent.putExtra("AppUser", "User");
                                         startActivity(intent);
                                         finish();
 

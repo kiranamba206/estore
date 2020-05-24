@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.vetzforpetz.estore.Model.Users;
 import com.vetzforpetz.estore.Prevalent.Prevalent;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,11 +32,13 @@ import com.theartofdev.edmodo.cropper.CropImage;
 import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import io.paperdb.Paper;
 
 public class SettingsActivity extends AppCompatActivity {
 
     private CircleImageView profileImageView;
-    private EditText fullNameEditText, userPhoneEditText, addressEditText;
+    private EditText fullNameEditText, userPhoneEditText, addressEditText, cityEditText,
+            emailAddressEditText;
     private TextView profileChangeTextBtn,  closeTextBtn, saveTextButton;
 
     private Uri imageUri;
@@ -50,6 +53,8 @@ public class SettingsActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        Prevalent mPrevalent = Prevalent.getInstance();
+        Users currentUser = mPrevalent.getCurrentOnlineUser();
 
         storageProfilePrictureRef = FirebaseStorage.getInstance().getReference().child("Profile pictures");
 
@@ -58,10 +63,19 @@ public class SettingsActivity extends AppCompatActivity {
         userPhoneEditText = findViewById(R.id.settings_phone_number);
         addressEditText = findViewById(R.id.settings_address);
         profileChangeTextBtn = findViewById(R.id.profile_image_change_btn);
+        //cityEditText = findViewById(R.id.settings_city_name);
+        //emailAddressEditText = findViewById(R.id.settings_email_address);
+
         closeTextBtn = findViewById(R.id.close_settings_btn);
         saveTextButton = findViewById(R.id.update_account_settings_btn);
 
-        userInfoDisplay(profileImageView, fullNameEditText, userPhoneEditText, addressEditText);
+        //TODO setting the profile image on the settings page
+        fullNameEditText.setText(currentUser.getName());
+        userPhoneEditText.setText(currentUser.getPhone());
+        addressEditText.setText(currentUser.getAddress());
+
+        //userInfoDisplay(profileImageView, fullNameEditText, userPhoneEditText, addressEditText);
+
 
         closeTextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +121,13 @@ public class SettingsActivity extends AppCompatActivity {
         userMap. put("name", fullNameEditText.getText().toString());
         userMap. put("address", addressEditText.getText().toString());
         userMap. put("phoneOrder", userPhoneEditText.getText().toString());
-        ref.child(Prevalent.currentOnlineUser.getPhone()).updateChildren(userMap);
+        Users updatedUsers = Prevalent.getCurrentOnlineUser();
+        updatedUsers.setName(fullNameEditText.getText().toString());
+        updatedUsers.setAddress(addressEditText.getText().toString());
+        updatedUsers.setPhone(userPhoneEditText.getText().toString());
+        ref.child(Prevalent.getCurrentOnlineUser().getPhone()).updateChildren(userMap);
+
+
 
         startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
         Toast.makeText(SettingsActivity.this, "Profile Info update successfully.", Toast.LENGTH_SHORT).show();
@@ -168,7 +188,7 @@ public class SettingsActivity extends AppCompatActivity {
         if (imageUri != null)
         {
             final StorageReference fileRef = storageProfilePrictureRef
-                    .child(Prevalent.currentOnlineUser.getPhone() + ".jpg");
+                    .child(Prevalent.getCurrentOnlineUser().getPhone() + ".jpg");
 
             uploadTask = fileRef.putFile(imageUri);
 
@@ -200,7 +220,7 @@ public class SettingsActivity extends AppCompatActivity {
                                 userMap. put("address", addressEditText.getText().toString());
                                 userMap. put("phoneOrder", userPhoneEditText.getText().toString());
                                 userMap. put("image", myUrl);
-                                ref.child(Prevalent.currentOnlineUser.getPhone()).updateChildren(userMap);
+                                ref.child(Prevalent.getCurrentOnlineUser().getPhone()).updateChildren(userMap);
 
                                 progressDialog.dismiss();
 
@@ -224,7 +244,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void userInfoDisplay(final CircleImageView profileImageView, final EditText fullNameEditText, final EditText userPhoneEditText, final EditText addressEditText)
     {
-        DatabaseReference UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child(Prevalent.currentOnlineUser.getPhone());
+        DatabaseReference UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child(Prevalent.getCurrentOnlineUser().getPhone());
 
         UsersRef.addValueEventListener(new ValueEventListener() {
             @Override

@@ -141,18 +141,19 @@ public class LoginActivity extends AppCompatActivity
                                 makeText(LoginActivity.this, R.string.WELCOME_ADMIN, LENGTH_SHORT).show();
                                 loadingBar.dismiss();
                                 mPrevalent.setCurrentOnlineUser(usersData);
-
+                                mPrevalent.setUserType("Admin");
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
-                                intent.putExtra("AppUser","Admin" );
+                                //intent.putExtra("AppUser","Admin" );
                                 startActivity(intent);
                             }
                             else if (parentDbName.equals("Users"))
                             {
                                 makeText(LoginActivity.this, R.string.LOGIN_SUCCESS, LENGTH_SHORT).show();
                                 loadingBar.dismiss();
+                                mPrevalent.setUserType("User");
 
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                                intent.putExtra("AppUser","User" );
+                                //intent.putExtra("AppUser","User" );
                                 mPrevalent.setCurrentOnlineUser(usersData);
 
                                 startActivity(intent);

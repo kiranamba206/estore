@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.vetzforpetz.estore.Prevalent.Prevalent;
+
 public class AdminCategoryActivity extends AppCompatActivity
 {
 
@@ -16,12 +18,14 @@ public class AdminCategoryActivity extends AppCompatActivity
     private Button LogoutBtn, CheckOrdersBtn, updateProductsBtn;
 
     private String appUser = "";
+    Prevalent mPrevalent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
+        mPrevalent= Prevalent.getInstance();
 
         //Administartion activity of Admin
         LogoutBtn = findViewById(R.id.admin_logout_btn);
@@ -29,7 +33,7 @@ public class AdminCategoryActivity extends AppCompatActivity
         updateProductsBtn = findViewById(R.id.update_btn);
 
 
-        appUser = getIntent().getStringExtra("AppUser");
+        appUser = mPrevalent.getUserType();//getIntent().getStringExtra("AppUser");
 
         if(appUser.equals("User")) {
             updateProductsBtn.setVisibility(View.INVISIBLE);
@@ -43,7 +47,7 @@ public class AdminCategoryActivity extends AppCompatActivity
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(AdminCategoryActivity.this, HomeActivity.class);
-                    intent.putExtra("AppUser", "Admin");
+                    //intent.putExtra("AppUser", "Admin");
                     startActivity(intent);
                 }
             });

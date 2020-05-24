@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.vetzforpetz.estore.Model.Products;
+import com.vetzforpetz.estore.Prevalent.Prevalent;
 import com.vetzforpetz.estore.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -25,17 +26,19 @@ public class ProductListActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     private String CategoryName;
+    Prevalent mPrevalent;
 
     private String type = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list);
+        mPrevalent = Prevalent.getInstance();
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         CategoryName = getIntent().getExtras().get("category").toString();
 
-        type = getIntent().getStringExtra("AppUser");
+        type = mPrevalent.getUserType();//getIntent().getStringExtra("AppUser");
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 

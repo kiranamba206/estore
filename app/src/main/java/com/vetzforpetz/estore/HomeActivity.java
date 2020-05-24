@@ -56,7 +56,7 @@ public class HomeActivity extends AppCompatActivity
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
-        type = getIntent().getStringExtra("AppUser");
+        type = mPrevalent.getUserType();//getIntent().getStringExtra("AppUser");
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
@@ -226,12 +226,12 @@ public class HomeActivity extends AppCompatActivity
         {
             if (type.equals("Admin")) {
                 Intent intent = new Intent(HomeActivity.this, AdminCategoryActivity.class);
-                intent.putExtra("AppUser","Admin" );
+                //intent.putExtra("AppUser","Admin" );
                 startActivity(intent);
             }
             else {
                 Intent intent = new Intent(HomeActivity.this, AdminCategoryActivity.class);
-                intent.putExtra("AppUser","User" );
+                //intent.putExtra("AppUser","User" );
                 startActivity(intent);
             }
         }

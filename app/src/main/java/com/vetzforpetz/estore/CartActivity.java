@@ -156,7 +156,7 @@ public class CartActivity extends AppCompatActivity {
                                                         Toast.makeText(CartActivity.this, "Item removed successfully.", Toast.LENGTH_SHORT).show();
 
                                                         Intent intent = new Intent(CartActivity.this, HomeActivity.class);
-                                                        intent.putExtra("AppUser","User" );
+                                                        //intent.putExtra("AppUser","User" );
                                                         startActivity(intent);
                                                     }
                                                 }
