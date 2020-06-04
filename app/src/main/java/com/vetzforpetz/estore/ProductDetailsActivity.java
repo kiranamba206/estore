@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.vetzforpetz.estore.Model.Cart;
 import com.vetzforpetz.estore.Model.Products;
 import com.vetzforpetz.estore.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -105,8 +106,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
     protected void onStart()
     {
         super.onStart();
-
-        CheckOrderState();
+        //TODO: Update Check Order State to read from updated Orders
+        //CheckOrderState();
     }
 
     private void addingToCartList()
@@ -120,7 +121,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calForDate.getTime());
 
-        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List").child("User View");
 
         final HashMap<String, Object> cartMap = new HashMap<>();
         cartMap.put("pid", productID);
@@ -130,11 +131,18 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("time", saveCurrentTime);
         cartMap.put("quantity", productQuantityButton.getNumber());
         cartMap.put("discount", "");
+        String mCustomMessage = customMessage.getText().toString();
         if (!customMessage.getText().toString().isEmpty()) {
-            cartMap.put("customMessage", customMessage.getText().toString());
+            cartMap.put("customMessage", mCustomMessage);
         }
 
-        cartListRef.child("User View").child(mPrevalent.getCurrentOnlineUser().getPhone())
+        Cart mCart =  new Cart(productID, productName.getText().toString(),
+                productPrice.getText().toString(), productQuantityButton.getNumber(),
+                "", mCustomMessage );
+        Log.i(TAG, "calling addOrUpdateLineItem " + mCart.toString());
+        mPrevalent.addOrUpdateOrderLineItem(mCart);
+
+        cartListRef.child(mPrevalent.getCurrentOnlineUser().getPhone())
                 .child("Products").child(productID)
                 .updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {

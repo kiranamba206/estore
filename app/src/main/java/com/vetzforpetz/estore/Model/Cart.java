@@ -63,4 +63,15 @@ public class Cart {
         this.discount = discount;
     }
 
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "pid='" + pid + '\'' +
+                ", pname='" + pname + '\'' +
+                ", price='" + price + '\'' +
+                ", quantity='" + quantity + '\'' +
+                ", discount='" + discount + '\'' +
+                ", customMessage='" + customMessage + '\'' +
+                '}';
+    }
 }

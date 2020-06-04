@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="pickup_delivery_times_array">
+            <item>Any Convenient Time</item>
+            <item>12:00pm</item>
+            <item>2:00pm</item>
+            <item>4:00pm</item>
+            <item>6:00pm</item>
+            <item>8:00pm</item>
+        </string-array>
+</resources>

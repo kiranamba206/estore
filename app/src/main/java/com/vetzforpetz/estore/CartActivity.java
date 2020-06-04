@@ -66,10 +66,15 @@ public class CartActivity extends AppCompatActivity {
                 txtTotalAmount.setText("Total Price : " + overTotalPrice + " Rs");
 
                 Log.v(TAG, "NextProcessBtn:setOnClickListener: Total price = " + overTotalPrice);
-
-                Intent intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
-                intent.putExtra("Total Price", String.valueOf(overTotalPrice));
-
+                Intent intent;
+                if (mPrevalent.getOrderLineItems().size() >0 ) {
+                    //cart has items, this will be normal cart flow
+                    intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
+                    intent.putExtra("Total Price", String.valueOf(overTotalPrice));
+                } else {
+                    // cart is empty, send the user back to shopping page
+                    intent = new Intent(CartActivity.this, HomeActivity.class);
+                }
                 startActivity(intent);
                 finish();
             }
@@ -82,7 +87,7 @@ public class CartActivity extends AppCompatActivity {
     {
         super.onStart();
         Log.v(TAG, "onStart starting");
-        CheckOrderState();
+       // CheckOrderState();
 
 
         final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
@@ -107,6 +112,7 @@ public class CartActivity extends AppCompatActivity {
                 holder.txtProductName.setText("Product : " + model.getPname());
                 int oneTypeProductTPrice = ((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTypeProductTPrice;
+                mPrevalent.addOrUpdateOrderLineItem(model);
 
                 txtTotalAmount.setText("Total Price : " + overTotalPrice + " Rs");
 
@@ -142,6 +148,8 @@ public class CartActivity extends AppCompatActivity {
                                 }
                                 if (i == 1)
                                 {
+                                    mPrevalent.removeOrderLineItem(model.getPid());
+                                    Log.i(TAG, "removing " + model.getPid() + " from cart ");
                                     cartListRef.child("User View")
                                             .child(mPrevalent.getCurrentOnlineUser().getPhone())
                                             .child("Products")
