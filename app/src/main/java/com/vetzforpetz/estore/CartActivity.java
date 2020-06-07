@@ -110,6 +110,9 @@ public class CartActivity extends AppCompatActivity {
                 holder.txtProductQuantity.setText( "Quantity : " + model.getQuantity());
                 holder.txtProductPrice.setText(" Price : " + model.getPrice() + " Rs");
                 holder.txtProductName.setText("Product : " + model.getPname());
+                if (model.getCustomMessage() != null && !model.getCustomMessage().isEmpty()) {
+                    holder.txtCustomMessage.setText("Custom Message: " + model.getCustomMessage());
+                }
                 int oneTypeProductTPrice = ((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTypeProductTPrice;
                 mPrevalent.addOrUpdateOrderLineItem(model);

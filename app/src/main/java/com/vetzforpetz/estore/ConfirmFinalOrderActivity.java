@@ -27,6 +27,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.vetzforpetz.estore.ui.datePicker.DatePickerFragment;
+import com.vetzforpetz.estore.Prevalent.PrevalentOrdersForAdmins;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -42,6 +43,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
     private TextView editTextDate_pickupDate;
     private Spinner spinner_timeSelection;
     private String orderNumber = "";
+
 
     private String totalAmount = "";
 
@@ -189,23 +191,35 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         SimpleDateFormat dataTime = new SimpleDateFormat("yyMMddHHmmssZ");
         orderNumber = dataTime.format(calForDate.getTimeInMillis());
 
-        final DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference()
-                .child("Orders")
-                .child(mPrevalent.getCurrentOnlineUser().getPhone());
 
+
+/*
+    Order Status
+    01 - Not Shipped
+    02 - Approved with changed date/time
+    03 - Processing
+    04 - Ready for Pickup
+    05 - Out for Delivery
+    06 - Complete
+
+ */
         AdminOrders mAdminOrder = new AdminOrders(
                 nameEditText.getText().toString(),
                 phoneEditText.getText().toString(),
                 addressEditText.getText().toString(),
                 cityEditText.getText().toString(),
-                "Not shipped",
+                "Not Shipped",
                 saveCurrentDate,
                 saveCurrentTime,
                 totalAmount,
                 orderNumber,
                 mPrevalent.getOrderLineItems()
                 );
+        mAdminOrder.setUserId(Prevalent.getCurrentOnlineUser().getPhone());
+        PrevalentOrdersForAdmins prevalentOrdersForAdmins = PrevalentOrdersForAdmins.getInstance();
+        mAdminOrder.setOrderStatusCode(prevalentOrdersForAdmins.getOrderStatusCode("Not Shipped"));
         mAdminOrder.setRequestedPickupTime(mPrevalent.getOrderHeader().getRequestedPickupTime());
+
         if (orderPickupRadioButton.isChecked()) {
             //order is pickup
             mAdminOrder.setFulfillmentMethod("Pickup");
@@ -216,22 +230,16 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
             mAdminOrder.setFulfillmentMethod("Delivery");
         }
 
-        HashMap<String, Object> ordersMap = new HashMap<>();
+        final HashMap<String, Object> ordersMap = new HashMap<>();
         ordersMap.put(orderNumber, mAdminOrder);
-        /*
-        ordersMap.put("totalAmount", totalAmount);
-        ordersMap.put("name", nameEditText.getText().toString());
-        ordersMap.put("phone", phoneEditText.getText().toString());
-        ordersMap.put("address", addressEditText.getText().toString());
-        ordersMap.put("city", cityEditText.getText().toString());
-        ordersMap.put("date", saveCurrentDate);
-        ordersMap.put("time", saveCurrentTime);
-        ordersMap.put("ordernumber", orderNumber);
-        ordersMap.put("state", "Not shipped");
-        ordersMap.put("lineItems", mPrevalent.getOrderLineItems());
-        */
+
 
         Log.v(TAG, "Order object created : " + ordersMap);
+
+
+        final DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference()
+                .child("Orders")
+                .child(mPrevalent.getCurrentOnlineUser().getPhone());
 
 
         ordersRef.updateChildren(ordersMap).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -259,6 +267,28 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                                     }
                                 }
                             });
+                    //Once order is placed, add copy of order into Admin View
+                    FirebaseDatabase.getInstance().getReference()
+                            .child("Cart List")
+                            .child("Admin View")
+                            .child(mPrevalent.getCurrentOnlineUser().getPhone())
+                            .updateChildren(ordersMap)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(ConfirmFinalOrderActivity.this, "Your final order has been placed successfully.", Toast.LENGTH_SHORT).show();
+                                        sendEmail();
+                                        Intent intent = new Intent(ConfirmFinalOrderActivity.this, HomeActivity.class);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        //intent.putExtra("AppUser", "User");
+                                        startActivity(intent);
+                                        finish();
+
+                                    }
+                                }
+                            });
+                    mPrevalent.resetCart();
                 }
             }
         });

@@ -22,6 +22,10 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Settings" />
         <item
+            android:id="@+id/nav_order_history"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Order History" />
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout"
             android:title="Logout" />

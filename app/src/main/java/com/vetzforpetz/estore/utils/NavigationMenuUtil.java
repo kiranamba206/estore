@@ -56,7 +56,7 @@ public class NavigationMenuUtil implements NavigationView.OnNavigationItemSelect
         this.navigationView.findViewById(R.id.nav_cart).setVisibility(View.INVISIBLE);
         this.navigationView.findViewById(R.id.nav_search).setVisibility(View.INVISIBLE);
         this.navigationView.findViewById(R.id.nav_settings).setVisibility(View.INVISIBLE);
-        //this.navigationView.findViewById(R.id.nav_order_history).setVisibility(View.INVISIBLE);
+        this.navigationView.findViewById(R.id.nav_order_history).setVisibility(View.INVISIBLE);
         this.navigationView.findViewById(R.id.nav_settings).setVisibility(View.INVISIBLE);
     }
 
@@ -116,8 +116,8 @@ public class NavigationMenuUtil implements NavigationView.OnNavigationItemSelect
                 currentContext.startActivity(intent);
             }
         }
-
          */
+
         else if (id == R.id.nav_logout)
         {
 

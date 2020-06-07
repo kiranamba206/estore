@@ -14,23 +14,83 @@
     android:layout_height="match_parent"
     tools:context=".AdminUserProductsActivity">
 
-    <RelativeLayout
+    <TableLayout
         android:id="@+id/r3"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimaryDark">
+        android:paddingHorizontal="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:stretchColumns="0,1">
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:text="Products"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/order_phone_number"
+                android:layout_width="0dp"                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mob:"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_column="0"/>
+            <TextView
+                android:id="@+id/order_total_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_column="1"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Products"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="25dp" />
-
-    </RelativeLayout>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/order_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Address:"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_column="0"/>
+            <TextView
+                android:id="@+id/order_delivery_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Type:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_column="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/order_requested_pickup_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Requested Pickup Date &amp; Time:"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_column="0"/>
+        </TableRow>
+    </TableLayout>
 
 
     <!--<android.support.v7.widget.RecyclerView -->

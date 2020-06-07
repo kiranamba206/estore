@@ -10,7 +10,7 @@ import com.vetzforpetz.estore.R;
 
 public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 {
-    public TextView txtProductName, txtProductPrice, txtProductQuantity;
+    public TextView txtProductName, txtProductPrice, txtProductQuantity, txtCustomMessage;
     private ItemClickListener itemClickListner;
 
 
@@ -18,9 +18,11 @@ public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     {
         super(itemView);
 
-        txtProductName = itemView.findViewById(R.id.cart_product_name);
-        txtProductPrice = itemView.findViewById(R.id.cart_product_price);
-        txtProductQuantity = itemView.findViewById(R.id.cart_product_quantity);
+        txtProductName = itemView.findViewById(R.id.cart_item_product_name);
+        txtProductPrice = itemView.findViewById(R.id.cart_item_product_price);
+        txtProductQuantity = itemView.findViewById(R.id.cart_item_product_quantity);
+        txtCustomMessage = itemView.findViewById(R.id.cart_item_custom_message);
+
     }
 
     @Override

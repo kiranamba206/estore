@@ -9,6 +9,8 @@ public class AdminOrders {
     private String fulfillmentMethod;
     private Date requestedPickupDate;
     private String requestedPickupTime;
+    private Integer orderStatusCode;
+    private String userId;
 
     private boolean isOrderApproved;
     private String approvedFulfillmentTime;
@@ -16,7 +18,10 @@ public class AdminOrders {
     private String deliveryAdminPhone;
 
     public AdminOrders() {
+
         fulfillmentMethod="Pickup";
+
+
     }
 
     public AdminOrders(String name, String phone, String address, String city, String state,
@@ -31,7 +36,10 @@ public class AdminOrders {
         this.totalAmount = totalAmount;
         this.orderNumber = orderNumber;
         fulfillmentMethod="Pickup";
+
+
     }
+
 
 
     public AdminOrders(String name, String phone, String address, String city, String state,
@@ -48,6 +56,7 @@ public class AdminOrders {
         this.orderNumber = orderNumber;
         this.lineItems = lineItems;
         fulfillmentMethod="Pickup";
+
     }
 
 
@@ -181,6 +190,22 @@ public class AdminOrders {
 
     public void setRequestedPickupTime(String requestedPickupTime) {
         this.requestedPickupTime = requestedPickupTime;
+    }
+
+    public Integer getOrderStatusCode() {
+        return orderStatusCode;
+    }
+
+    public void setOrderStatusCode(Integer orderStatusCode) {
+        this.orderStatusCode = orderStatusCode;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     @Override

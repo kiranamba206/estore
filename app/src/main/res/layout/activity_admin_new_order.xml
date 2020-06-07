@@ -1,46 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminNewOrderActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>-->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AdminNewOrderActivity">
-
-    <RelativeLayout
-        android:id="@+id/r2"
+    <TextView
+        android:id="@+id/new_orders_title"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="New Orders"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:background="@color/colorPrimaryDark"
-        android:layout_alignParentTop="true">
-
-        <TextView
+        android:textSize="20sp" />
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="New Orders"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="20dp" />
+            android:layout_height="match_parent"
+            android:layout_below="@+id/new_orders_title"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orders_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
 
-    </RelativeLayout>
 
 
-    <!--<android.support.v7.widget.RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/orders_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/r2">
-    <!--</android.support.v7.widget.RecyclerView>-->
-    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

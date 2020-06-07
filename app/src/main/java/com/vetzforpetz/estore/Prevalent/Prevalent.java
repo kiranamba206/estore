@@ -10,26 +10,28 @@ import java.util.HashMap;
 
 public class Prevalent
 {
-    private static final Prevalent mPrevalent = new Prevalent();
+    private static Prevalent mPrevalent = new Prevalent();
     private static Users currentOnlineUser;
     private String userType;
     private HashMap<String, Cart> orderLineItems;
     private String orderNumber;
     private AdminOrders orderHeader;
+    public static final String UserPhoneKey = "UserPhone";
+    public static final String UserPasswordKey = "UserPassword";
 
+
+    public static Prevalent getInstance() {
+        if (mPrevalent == null) {
+            mPrevalent = new Prevalent();
+        }
+        return mPrevalent;
+    }
     public AdminOrders getOrderHeader() {
         return orderHeader;
     }
 
     public void setOrderHeader(AdminOrders orderHeader) {
         this.orderHeader = orderHeader;
-    }
-
-    public static final String UserPhoneKey = "UserPhone";
-    public static final String UserPasswordKey = "UserPassword";
-
-    public static Prevalent getInstance() {
-        return mPrevalent;
     }
 
     public static Users getCurrentOnlineUser() {
@@ -88,4 +90,7 @@ public class Prevalent
         orderLineItems.remove(productId);
     }
 
+    public void resetCart() {
+        orderLineItems.clear();
+    }
 }
