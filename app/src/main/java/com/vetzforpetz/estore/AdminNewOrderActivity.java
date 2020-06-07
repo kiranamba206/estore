@@ -26,6 +26,7 @@ import com.vetzforpetz.estore.Model.AdminOrders;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.vetzforpetz.estore.Model.Cart;
+import com.vetzforpetz.estore.Prevalent.Prevalent;
 import com.vetzforpetz.estore.Prevalent.PrevalentOrdersForAdmins;
 
 
@@ -40,6 +41,7 @@ public class AdminNewOrderActivity extends AppCompatActivity {
     private RecyclerView orderListView;
     private DatabaseReference ordersRef;
     PrevalentOrdersForAdmins prevalentOrdersForAdmins = PrevalentOrdersForAdmins.getInstance();
+    Prevalent prevalentUserData = Prevalent.getInstance();
     String TAG = "AdminNewOrderAct";
     //AdminCartOrder ordersToBeProcessed;
     @Override
@@ -48,9 +50,12 @@ public class AdminNewOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_new_order);
         prevalentOrdersForAdmins.setOrdersToBeProcessed(new AdminCartOrder());
-        ordersRef = FirebaseDatabase.getInstance().getReference()
+        /*ordersRef = FirebaseDatabase.getInstance().getReference()
                     .child("Cart List")
                     .child("Admin View");
+
+         */
+        ordersRef = prevalentOrdersForAdmins.getOrdersDataRef();
         orderListView = (RecyclerView) findViewById(R.id.orders_list_view);
 
         orderListView.setLayoutManager(new LinearLayoutManager(this));
@@ -62,10 +67,26 @@ public class AdminNewOrderActivity extends AppCompatActivity {
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot userListLevel: dataSnapshot.getChildren()) {
-                    Log.v(TAG, "userListLevel " + userListLevel.toString());
-                    String userId = userListLevel.getKey();
-                    for (DataSnapshot orderListLevel: userListLevel.getChildren()) {
+                if (prevalentUserData.getUserType() == "Admin") {
+                    for (DataSnapshot userListLevel : dataSnapshot.getChildren()) {
+                        Log.v(TAG, "userListLevel " + userListLevel.toString());
+                        //String userId = userListLevel.getKey();
+                        for (DataSnapshot orderListLevel : userListLevel.getChildren()) {
+                            if (orderListLevel.getKey().equals("Products")) {
+                                //these are older format orders
+                            } else {
+                                Log.v(TAG, "orderListLevel" + orderListLevel);
+                                prevalentOrdersForAdmins.getOrdersToBeProcessed()
+                                        .addItemToOrderList(orderListLevel.getValue(AdminOrders.class));
+                            }
+                        }
+                    }
+                } else {
+                    // this is for normal user, where the database reference has already come
+                    // with phone number level reference
+                    Log.v(TAG, "userListLevel " + dataSnapshot.toString());
+                    //String userId = userListLevel.getKey();
+                    for (DataSnapshot orderListLevel : dataSnapshot.getChildren()) {
                         if (orderListLevel.getKey().equals("Products")) {
                             //these are older format orders
                         } else {
@@ -74,6 +95,7 @@ public class AdminNewOrderActivity extends AppCompatActivity {
                                     .addItemToOrderList(orderListLevel.getValue(AdminOrders.class));
                         }
                     }
+
                 }
                 Log.v(TAG, "ordersToBeProcessed = " + prevalentOrdersForAdmins.getOrdersToBeProcessed());
 

@@ -1,5 +1,6 @@
 package com.vetzforpetz.estore.Prevalent;
 
+import com.google.firebase.database.DatabaseReference;
 import com.vetzforpetz.estore.Model.AdminCartOrder;
 
 import java.util.HashMap;
@@ -9,7 +10,7 @@ public class PrevalentOrdersForAdmins {
     private static PrevalentOrdersForAdmins prevalentOrdersForAdmins = new PrevalentOrdersForAdmins();
 
     AdminCartOrder ordersToBeProcessed;
-
+    DatabaseReference ordersDataRef;
     HashMap<String, Integer> orderStatusCodes;
 
     private PrevalentOrdersForAdmins() {
@@ -50,4 +51,11 @@ public class PrevalentOrdersForAdmins {
         this.ordersToBeProcessed = ordersToBeProcessed;
     }
 
+    public DatabaseReference getOrdersDataRef() {
+        return ordersDataRef;
+    }
+
+    public void setOrdersDataRef(DatabaseReference ordersDataRef) {
+        this.ordersDataRef = ordersDataRef;
+    }
 }

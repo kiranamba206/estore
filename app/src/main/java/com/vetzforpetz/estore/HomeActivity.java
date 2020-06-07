@@ -244,6 +244,14 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         }
+        else if (id == R.id.nav_order_history)
+        {//TODO have to create activity for the Order history page for users
+            if (!mPrevalent.getUserType().equals("Admin")) {
+                //Open settings page
+                Intent intent = new Intent(this, AdminNewOrderActivity.class);
+                startActivity(intent);
+            }
+        }
 
         else if (id == R.id.nav_logout)
         {

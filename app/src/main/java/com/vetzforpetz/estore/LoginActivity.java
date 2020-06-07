@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rey.material.widget.CheckBox;
+import com.vetzforpetz.estore.Prevalent.PrevalentOrdersForAdmins;
 
 import io.paperdb.Paper;
 
@@ -115,6 +116,7 @@ public class LoginActivity extends AppCompatActivity
     {
 
         final Prevalent mPrevalent = Prevalent.getInstance();
+        final PrevalentOrdersForAdmins prevalentOrders = PrevalentOrdersForAdmins.getInstance();
         if(chkBoxRememberMe.isChecked())
         {
             Paper.book().write(mPrevalent.getUserPhoneKey(), phone);
@@ -142,6 +144,10 @@ public class LoginActivity extends AppCompatActivity
                                 loadingBar.dismiss();
                                 mPrevalent.setCurrentOnlineUser(usersData);
                                 mPrevalent.setUserType("Admin");
+                                prevalentOrders.setOrdersDataRef(FirebaseDatabase.getInstance().getReference()
+                                        .child("Cart List")
+                                        .child("Admin View"));
+
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
                                 //intent.putExtra("AppUser","Admin" );
                                 startActivity(intent);
@@ -151,6 +157,9 @@ public class LoginActivity extends AppCompatActivity
                                 makeText(LoginActivity.this, R.string.LOGIN_SUCCESS, LENGTH_SHORT).show();
                                 loadingBar.dismiss();
                                 mPrevalent.setUserType("User");
+                                prevalentOrders.setOrdersDataRef(FirebaseDatabase.getInstance().getReference()
+                                        .child("Orders")
+                                        .child(phone));
 
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 //intent.putExtra("AppUser","User" );
