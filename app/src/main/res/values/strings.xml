@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">VetzForPetz</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="LOGIN_SUCCESS">Logged in Successfully...</string>
+    <string name="INCORRECT_PASSWORD">Password is incorrect.</string>
+    <string name="LOGIN_ADMIN_TITLE">Login Admin</string>
+    <string name="LOGIN_TITLE">Login</string>
+    <string name="ENTER_PHONE_NUMBER">Please enter your phone number...</string>
+    <string name="ENTER_PASSWORD">Please enter your password...</string>
+    <string name="LOGIN_ACCOUNT_TITLE">Login Account</string>
+    <string name="VALIDATE_CREDENTIALS">Validating the credentials.</string>
+    <string name="WELCOME_ADMIN">Welcome Admin, you are logged in Successfully...</string>
+    <string name="settings_close">Close</string>
+    <string name="settings_update">Update</string>
+    <string name="change_profile_text">Change Profile</string>
+    <string name="settings_phone_number_hint">Phone Number...</string>
+    <string name="settings_full_name_hint">Full Name...</string>
+    <string name="settings_address_hint">Address...</string>
+    <string name="settings_city_name_hint">City Name</string>
+    <string name="settings_email_address_hint">Email Address</string>
+    <string name="settings_autofill_hints">Enter Email address</string>
+
+</resources>

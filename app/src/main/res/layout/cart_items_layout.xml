@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<android.support.v7.widget.CardView -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="15dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:stretchColumns="0,1"
+        android:shrinkColumns="*"
+        >
+        <TableRow>
+        <TextView
+            android:id="@+id/cart_item_product_name"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="Product Name"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_column="0"/>
+
+        <TextView
+            android:id="@+id/cart_item_product_quantity"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:text="Product Quantity"
+            android:textAlignment="viewEnd"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_column="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/cart_item_product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Product Price"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_column="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/cart_item_custom_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="@android:color/white"
+                android:text="Custom Message"
+                android:textStyle="bold"
+                android:layout_column="0"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+<!--</android.support.v7.widget.CardView>-->
+</androidx.cardview.widget.CardView>
