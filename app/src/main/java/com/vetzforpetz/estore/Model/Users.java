@@ -1,8 +1,11 @@
 package com.vetzforpetz.estore.Model;
 
+import java.util.HashMap;
+
 public class Users
 {
     private String name, phone, password, image, address, city, email;
+    boolean role_delivery;
     private boolean isLoggedIn = false;
     public Users()
     {
@@ -85,4 +88,11 @@ public class Users
         this.address = address;
     }
 
+    public boolean getRole_delivery() {
+        return role_delivery;
+    }
+
+    public void setRole_delivery(boolean role_delivery) {
+        this.role_delivery = role_delivery;
+    }
 }

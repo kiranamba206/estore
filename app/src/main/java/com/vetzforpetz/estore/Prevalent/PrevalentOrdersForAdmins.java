@@ -2,8 +2,10 @@ package com.vetzforpetz.estore.Prevalent;
 
 import com.google.firebase.database.DatabaseReference;
 import com.vetzforpetz.estore.Model.AdminCartOrder;
+import com.vetzforpetz.estore.Model.Users;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class PrevalentOrdersForAdmins {
     //making this class as singleton
@@ -12,6 +14,7 @@ public class PrevalentOrdersForAdmins {
     AdminCartOrder ordersToBeProcessed;
     DatabaseReference ordersDataRef;
     HashMap<String, Integer> orderStatusCodes;
+    List<Users> deliveryAdminsList;
 
     private PrevalentOrdersForAdmins() {
         orderStatusCodes = new HashMap<>();
@@ -57,5 +60,13 @@ public class PrevalentOrdersForAdmins {
 
     public void setOrdersDataRef(DatabaseReference ordersDataRef) {
         this.ordersDataRef = ordersDataRef;
+    }
+
+    public List<Users> getDeliveryAdminsList() {
+        return deliveryAdminsList;
+    }
+
+    public void setDeliveryAdminsList(List<Users> deliveryAdminsList) {
+        this.deliveryAdminsList = deliveryAdminsList;
     }
 }

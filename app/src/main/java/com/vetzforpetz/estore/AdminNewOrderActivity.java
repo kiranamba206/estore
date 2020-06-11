@@ -16,21 +16,25 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.vetzforpetz.estore.Model.AdminCartOrder;
 import com.vetzforpetz.estore.Model.AdminOrders;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.vetzforpetz.estore.Model.Cart;
+import com.vetzforpetz.estore.Model.Users;
 import com.vetzforpetz.estore.Prevalent.Prevalent;
 import com.vetzforpetz.estore.Prevalent.PrevalentOrdersForAdmins;
 
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -39,7 +43,7 @@ import java.util.Map;
 public class AdminNewOrderActivity extends AppCompatActivity {
 
     private RecyclerView orderListView;
-    private DatabaseReference ordersRef;
+    private DatabaseReference ordersRef, deliveryAdminsRef;
     PrevalentOrdersForAdmins prevalentOrdersForAdmins = PrevalentOrdersForAdmins.getInstance();
     Prevalent prevalentUserData = Prevalent.getInstance();
     String TAG = "AdminNewOrderAct";
@@ -50,12 +54,38 @@ public class AdminNewOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_new_order);
         prevalentOrdersForAdmins.setOrdersToBeProcessed(new AdminCartOrder());
+        deliveryAdminsRef = FirebaseDatabase.getInstance().getReference().child("Admins");
         /*ordersRef = FirebaseDatabase.getInstance().getReference()
                     .child("Cart List")
                     .child("Admin View");
 
          */
+
         ordersRef = prevalentOrdersForAdmins.getOrdersDataRef();
+        Query deliveryAdminsRefQuery = deliveryAdminsRef.orderByChild("role_delivery")
+                            .equalTo(true);
+        deliveryAdminsRefQuery.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot != null) {
+                    List<Users>deliveryAdminsList = new ArrayList<>();
+                    for (DataSnapshot tempAdmin : dataSnapshot.getChildren()) {
+                        String key = tempAdmin.getKey();
+                        deliveryAdminsList.add(tempAdmin.getValue(Users.class));
+                        Log.v(TAG, "all choldren of dataSnapshot =" + tempAdmin);
+                    }
+                    prevalentOrdersForAdmins.setDeliveryAdminsList(deliveryAdminsList);
+                }
+                Log.v(TAG, "Delivery Admins Query successful, list =" + dataSnapshot);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         orderListView = (RecyclerView) findViewById(R.id.orders_list_view);
 
         orderListView.setLayoutManager(new LinearLayoutManager(this));
@@ -124,22 +154,29 @@ public class AdminNewOrderActivity extends AppCompatActivity {
     {
         super.onStart();
 
-        FirebaseRecyclerOptions<AdminOrders> options =
-                new FirebaseRecyclerOptions.Builder<AdminOrders>()
-                        .setQuery(ordersRef, AdminOrders.class)
+        FirebaseRecyclerOptions<AdminCartOrder> options =
+                new FirebaseRecyclerOptions.Builder<AdminCartOrder>()
+                        .setQuery(ordersRef, AdminCartOrder.class)
                         .build();
 
-        FirebaseRecyclerAdapter<AdminOrders, AdminOrdersViewHolder> adapter =
-                new FirebaseRecyclerAdapter<AdminOrders, AdminOrdersViewHolder>(options) {
+            FirebaseRecyclerAdapter<AdminCartOrder, AdminOrdersViewHolder> adapter =
+                new FirebaseRecyclerAdapter<AdminCartOrder, AdminOrdersViewHolder>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull AdminOrdersViewHolder holder, final int position, @NonNull final AdminOrders model)
+                    protected void onBindViewHolder(@NonNull AdminOrdersViewHolder holder,
+                                                    final int position,
+                                                    @NonNull final AdminCartOrder model)
                     {
+                        Log.v("AdmnNewOrdrAct","position =" + position + " order =" + model);
+                       /*
                         holder.userOrderNumber.setText("Order# : " + model.getOrderNumber());
                         holder.userName.setText("Name : " + model.getName());
                         holder.userPhoneNumber.setText("Phone : " + model.getPhone());
                         holder.userTotalPrice.setText("Total Amount :  Rs. " + model.getTotalAmount());
                         holder.userDateTime.setText("Order on : " + model.getDate() + "  " + model.getTime());
                         holder.userShippingAddress.setText("Shipping Address : " + model.getAddress() + ", " + model.getCity());
+                        holder.orderStatus.setText("Status: " + model.getState());
+                        holder.requestedOrderDate.setText("Requested on " + model.getRequestedPickupDate() + " " + model.getRequestedPickupTime());
+                        holder.orderFulfillmentMethod.setText("Order Type: " + model.getFulfillmentMethod());
 
                         holder.ShowOrdersBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -185,6 +222,7 @@ public class AdminNewOrderActivity extends AppCompatActivity {
                                 builder.show();
                             }
                         });
+
                     }
 
                     @NonNull
@@ -207,15 +245,15 @@ public class AdminNewOrderActivity extends AppCompatActivity {
         private String TAG = "AdminOrdersViewHolder";
         List<AdminOrders> orderListDataSet;
 
+
         public  class OrderViewHolder
-                        extends RecyclerView.ViewHolder
-                        implements View.OnClickListener {
+                        extends RecyclerView.ViewHolder {
             public TextView userName, userPhoneNumber, userTotalPrice, userDateTime, userShippingAddress,
                     userOrderNumber, orderStatus, requestedOrderDate, orderFulfillmentMethod,
-                    hasCustomMessage, deliveredBy;
+                    hasCustomMessage, deliveredBy, approvedDateTimeText;
+            Spinner orderStatusSpinner, deliveredBySpinner;
 
             private String userId, orderNumber;
-
 
             public OrderViewHolder(@NonNull View itemView) {
                 super(itemView);
@@ -230,18 +268,13 @@ public class AdminNewOrderActivity extends AppCompatActivity {
                 requestedOrderDate = itemView.findViewById(R.id.requested_date_time);
                 orderFulfillmentMethod = itemView.findViewById(R.id.order_fulfillment_method);
                 hasCustomMessage = itemView.findViewById(R.id.has_custom_message);
-                orderStatus.setOnClickListener(this);
-                itemView.setOnClickListener(this);
+                orderStatusSpinner = itemView.findViewById(R.id.order_status_spinner);
+                approvedDateTimeText = itemView.findViewById(R.id.approved_date_time);
+                deliveredBySpinner = itemView.findViewById(R.id.delivered_by_spinner);
             }
 
-            @Override
-            public void onClick(View v) {
-                Log.v(TAG, "View =" + v);
-                Intent intent = new Intent(itemView.getContext(),AdminUserProductsActivity.class);
-                intent.putExtra("uid", userId);
-                intent.putExtra("orderNumber", orderNumber);
-                startActivity(intent);
-            }
+
+
         }
 
         public AdminOrdersArrayAdapter(List<AdminOrders> ordersList) {
@@ -267,8 +300,9 @@ public class AdminNewOrderActivity extends AppCompatActivity {
         }
         // Populating data in a row
         @Override
-        public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull final OrderViewHolder holder, int position) {
             //Getting the data from the position
+            final boolean[] isTheViewCompressed = {true};
             AdminOrders orderRow = orderListDataSet.get(position);
             Log.v(TAG, "position =" + position + "orderRow = " + orderRow);
             holder.userId = orderRow.getPhone();
@@ -282,11 +316,46 @@ public class AdminNewOrderActivity extends AppCompatActivity {
             holder.userShippingAddress.setText("Address:" + orderRow.getAddress());
             holder.userOrderNumber.setText("Order#" + orderRow.getOrderNumber());
             holder.orderStatus.setText("Status: " + orderRow.getState());
+            if (prevalentUserData.getUserType().equals("Admin")) {
+                //check if the user is admin and then setup data for editing orders from this screen itself
+                //-------Setting up Order Status Drop Down
+
+                ArrayAdapter<String> OrderStatusSpinnerAdapter =new ArrayAdapter<>(
+                            getApplicationContext(),
+                            android.R.layout.simple_spinner_item,
+                            new ArrayList<>(prevalentOrdersForAdmins.getOrderStatus().keySet()));
+                OrderStatusSpinnerAdapter.setDropDownViewResource
+                                                (android.R.layout.simple_spinner_dropdown_item);
+                holder.orderStatusSpinner.setAdapter(OrderStatusSpinnerAdapter);
+            }
+
             if (orderRow.getRequestedPickupDate() != null) {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy");
                 String requestedPickDateToDisplay = dateFormat.format(orderRow.getRequestedPickupDate())
                         + "\n" + orderRow.getRequestedPickupTime();
                 holder.requestedOrderDate.setText("Requested Pick Date:" + requestedPickDateToDisplay);
+            }
+            if (orderRow.getApprovedFulfillmentTime() != null
+                                        && !orderRow.getApprovedFulfillmentTime().isEmpty()) {
+                holder.approvedDateTimeText.setText("Approved Date/Time: "
+                                                        + orderRow.getApprovedFulfillmentTime());
+            } else {
+                holder.approvedDateTimeText.setText("Change Delivery Date/Time: ");
+            }
+            // ---------- fill the delivery Admin spinner if the user is admin
+            List<String> deliveryAdminNameList = new ArrayList<>();
+            for (int i =0; i< prevalentOrdersForAdmins.getDeliveryAdminsList().size(); i++) {
+                deliveryAdminNameList.add(prevalentOrdersForAdmins.getDeliveryAdminsList().get(i).getName());
+            }
+            if (prevalentUserData.getUserType().equals("Admin")) {
+                ArrayAdapter<String> DeliveryAdminAdapter=new ArrayAdapter<>(
+                                                            getApplicationContext(),
+                                                            android.R.layout.simple_spinner_item,
+                                                            deliveryAdminNameList
+                                                    );
+                DeliveryAdminAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                holder.deliveredBySpinner.setAdapter(DeliveryAdminAdapter);
+
             }
             holder.orderFulfillmentMethod.setText("Order Type: " + orderRow.getFulfillmentMethod());
             boolean doesOrderHaveCustomMessage = false;
@@ -303,8 +372,42 @@ public class AdminNewOrderActivity extends AppCompatActivity {
             if( doesOrderHaveCustomMessage) {
                 holder.hasCustomMessage.setText("Order Has Custom Message");
             }
-            //TODO Set deliveredBy to the person doing the delivery
+
+            if (prevalentUserData.getUserType().equals("Admin")) {
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Log.v(TAG, "View =" + v);
+                        if (prevalentUserData.getUserType().equals("Admin") && isTheViewCompressed[0]) {
+                            // Admin user clicked on the order tile for the first time
+                            // expanding the tile to show immediately editable items
+                            // second click will take admin to order detail page
+
+                            isTheViewCompressed[0] = false;
+                            Log.v(TAG, "Click on detected on the order tile");
+                            holder.deliveredBySpinner.setVisibility(View.VISIBLE);
+                            holder.orderStatusSpinner.setVisibility(View.VISIBLE);
+                            holder.approvedDateTimeText.setVisibility(View.VISIBLE);
+                            holder.approvedDateTimeText.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Log.v(TAG, "Got clikc on approved Date Time Text");
+
+                                }
+                            });
+                        } else {
+                            Intent intent = new Intent(getApplicationContext(), AdminUserProductsActivity.class);
+                            intent.putExtra("uid", prevalentUserData.getCurrentOnlineUser().getPhone());
+                            intent.putExtra("orderNumber", holder.orderNumber);
+                            startActivity(intent);
+                        }
+                    }
+                });
+            }
         }
+
+
+
 
         @Override
         public int getItemCount() {
