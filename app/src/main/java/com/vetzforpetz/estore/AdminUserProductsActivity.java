@@ -176,8 +176,6 @@ public class AdminUserProductsActivity extends AppCompatActivity {
 
 
     }
-
-
     /*
     @Override
     protected void onStart()
@@ -211,4 +209,5 @@ public class AdminUserProductsActivity extends AppCompatActivity {
         productsList.setAdapter(adapter);
         adapter.startListening();
     }
+    */
 }

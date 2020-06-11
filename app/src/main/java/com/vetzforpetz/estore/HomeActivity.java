@@ -60,13 +60,11 @@ public class HomeActivity extends AppCompatActivity
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
-
         Paper.init(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("VetzForPetz");
         setSupportActionBar(toolbar);
-
 
         //user clicks on the add-to-cart floating button
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -117,7 +115,6 @@ public class HomeActivity extends AppCompatActivity
                 new FirebaseRecyclerOptions.Builder<Products>()
                         .setQuery(ProductsRef, Products.class)
                         .build();
-
 
         FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
                 new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {

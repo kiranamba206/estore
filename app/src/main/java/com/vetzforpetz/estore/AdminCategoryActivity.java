@@ -12,7 +12,6 @@ import com.vetzforpetz.estore.Prevalent.Prevalent;
 
 public class AdminCategoryActivity extends AppCompatActivity
 {
-
     private LinearLayout  dogCategory, catCategory, vetServices, customFood, petAccessories;
 
     private Button LogoutBtn, CheckOrdersBtn, updateProductsBtn;
@@ -31,7 +30,6 @@ public class AdminCategoryActivity extends AppCompatActivity
         LogoutBtn = findViewById(R.id.admin_logout_btn);
         CheckOrdersBtn = findViewById(R.id.check_orders_btn);
         updateProductsBtn = findViewById(R.id.update_btn);
-
 
         appUser = mPrevalent.getUserType();//getIntent().getStringExtra("AppUser");
 
@@ -77,7 +75,6 @@ public class AdminCategoryActivity extends AppCompatActivity
         vetServices = findViewById(R.id.vet_services_category_layout);
         customFood = findViewById(R.id.customized_food_category_layout);
         petAccessories = findViewById(R.id.accessories_category_layout);
-
 
         dogCategory.setOnClickListener(new View.OnClickListener() {
             @Override

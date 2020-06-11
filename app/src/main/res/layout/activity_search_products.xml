@@ -26,31 +26,30 @@
 
         <com.rey.material.widget.EditText
             android:id="@+id/search_product_name"
-            android:layout_width="290dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:hint="Product Name"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:background="@android:color/white"
-            android:padding="9dp"
-            android:layout_marginStart="17dp"
             android:layout_centerVertical="true"
+            android:layout_marginStart="17dp"
+            android:background="@android:color/white"
+            android:hint="Product Name"
+            android:padding="9dp"
             android:textColorHint="@color/colorPrimaryDark"
-            />
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/search_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search"
-            android:textColor="@android:color/white"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:padding="9dp"
             android:layout_centerInParent="true"
-            android:background="@color/colorPrimaryDark"
             android:layout_toRightOf="@+id/search_product_name"
-            />
+            android:background="@color/colorPrimaryDark"
+            android:padding="9dp"
+            android:text="Search"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
