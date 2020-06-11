@@ -57,8 +57,7 @@ public class CartActivity extends AppCompatActivity {
         NextProcessBtn = findViewById(R.id.next_btn);
         txtTotalAmount = findViewById(R.id.total_price);
         txtMsg1 = findViewById(R.id.msg1);
-
-
+        
         NextProcessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)

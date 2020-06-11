@@ -52,13 +52,11 @@ public class ProductListActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-
         FirebaseRecyclerOptions<Products> options =
                 new FirebaseRecyclerOptions.Builder<Products>()
-                        .setQuery(ProductsRef.orderByChild("category").startAt(CategoryName), Products.class)
+                        //.setQuery(ProductsRef.orderByChild("category").startAt(CategoryName), Products.class)
+                        .setQuery(ProductsRef.orderByChild("category").equalTo(CategoryName), Products.class)
                         .build();
-
-
         FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
                 new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
                     @Override

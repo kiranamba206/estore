@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -258,12 +259,12 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(ConfirmFinalOrderActivity.this, "Your final order has been placed successfully.", Toast.LENGTH_SHORT).show();
                                         sendEmail();
+                                        sendSMS();
                                         Intent intent = new Intent(ConfirmFinalOrderActivity.this, HomeActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         //intent.putExtra("AppUser", "User");
                                         startActivity(intent);
                                         finish();
-
                                     }
                                 }
                             });
@@ -296,25 +297,45 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
 
 
     protected void sendEmail() {
-        Log.i("Send email", "");
+        /*Log.i("Send email", "");
         String[] TO = {"kiranamba206@gmail.com"};
-        String[] CC = {"kavithakiran1406@gmail.com"};
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        String[] CC = {"kiranamba206@gmail.com"};
+        Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("message/rfc822");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-        emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your order for VetzForPetz");
-        emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
-        emailIntent.putExtra(Intent.EXTRA_TEXT, orderNumber);
+        //emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(android.content.Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Your order for VetzForPetz");
+        emailIntent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, orderNumber);
 
         try {
-            startActivity(Intent.createChooser(emailIntent, "Send mail"));
+            startActivity(android.content.Intent.createChooser(emailIntent, "Send mail"));
             finish();
             Log.i("Finished sending email", "");
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(ConfirmFinalOrderActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
+    }*/
+
+        Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"VetzForPetz - Order");
+        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Order placed");
+        startActivity(Intent.createChooser(emailIntent,"Order Statement"));
     }
+
+    protected void sendSMS(){
+        try{
+            SmsManager smgr = SmsManager.getDefault();
+            smgr.sendTextMessage(phoneEditText.getText().toString(),null,"Order Placed",null,null);
+            Toast.makeText(ConfirmFinalOrderActivity.this, "SMS Sent Successfully", Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e){
+            Toast.makeText(ConfirmFinalOrderActivity.this, "SMS Failed to Send, Please try again", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
 }
