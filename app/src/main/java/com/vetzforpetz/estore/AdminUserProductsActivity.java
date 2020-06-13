@@ -173,8 +173,6 @@ public class AdminUserProductsActivity extends AppCompatActivity {
             return cartList.size();
         }
 
-
-
     }
     /*
     @Override

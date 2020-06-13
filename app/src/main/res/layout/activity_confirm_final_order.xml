@@ -44,7 +44,6 @@
                 android:layout_margin="10dp"
                 android:layout_columnSpan="2"
                 />
-
             <EditText
                 android:id="@+id/shippment_address"
                 android:layout_width="match_parent"
@@ -61,8 +60,6 @@
                 android:layout_margin="10dp"
                 android:layout_columnSpan="2"
                 />
-
-
             <RadioGroup
                 android:id="@+id/radioGroup_pickOrDelivery"
                 android:layout_width="match_parent"
@@ -73,7 +70,6 @@
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
                 android:layout_columnSpan="2">
-
                 <RadioButton
                     android:id="@+id/radioButton_pickup"
                     android:layout_width="wrap_content"
@@ -81,16 +77,13 @@
                     android:layout_gravity="center_vertical"
                     android:layout_margin="8dp"
                     android:text="Pickup" />
-
                 <RadioButton
                     android:id="@+id/radioButton_delivery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:layout_margin="8dp"
                     android:text="Delivery" />
             </RadioGroup>
-
             <TextView
                 android:id="@+id/textView_pickupDateTime"
                 android:layout_width="match_parent"
@@ -126,7 +119,6 @@
                 android:layout_height="40dp"
                 android:layout_columnSpan="2"
                 />
-
             <TextView
                 android:id="@+id/txt1"
                 android:layout_width="341dp"
@@ -153,7 +145,6 @@
                 android:textSize="20dp"
                 android:layout_columnSpan="2"/>
         </GridLayout>
-
     </ScrollView>
 </LinearLayout>
 
