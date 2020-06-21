@@ -25,28 +25,32 @@
 
         <ImageView
             android:id="@+id/product_image"
-            android:layout_width="250dp"
-            android:layout_height="100dp"
+            android:layout_width="139dp"
+            android:layout_height="87dp"
             android:layout_below="@+id/product_name"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="1dp"
             android:scaleType="centerInside" />
 
         <TextView
             android:id="@+id/product_price"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/product_name"
+            android:layout_below="@id/product_description"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:layout_centerVertical="false"
             android:layout_toRightOf="@id/product_image"
             android:text="Product Price"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/product_description"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/product_price"
+            android:layout_below="@id/product_name"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/product_image"
             android:text="Product Description"

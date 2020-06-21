@@ -173,11 +173,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
             return cartList.size();
         }
 
-
-
     }
-
-
     /*
     @Override
     protected void onStart()
@@ -211,4 +207,5 @@ public class AdminUserProductsActivity extends AppCompatActivity {
         productsList.setAdapter(adapter);
         adapter.startListening();
     }
+    */
 }
