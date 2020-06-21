@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.vetzforpetz.estore.Prevalent.PrevalentOrdersForAdmins;
 
 import io.paperdb.Paper;
 
@@ -96,6 +97,13 @@ public class MainActivity extends AppCompatActivity
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             Prevalent.setCurrentOnlineUser(usersData);
+                            Prevalent mPrevalent = Prevalent.getInstance();
+                            mPrevalent.setUserType("User");
+                            PrevalentOrdersForAdmins.getInstance()
+                                    .setOrdersDataRef(FirebaseDatabase.getInstance().getReference()
+                                                        .child("Orders")
+                                                        .child(phone));
+                            mPrevalent.setCurrentOnlineUser(usersData);
                             startActivity(intent);
                         }
                         else
