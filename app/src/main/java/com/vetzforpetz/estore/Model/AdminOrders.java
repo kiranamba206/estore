@@ -1,7 +1,11 @@
 package com.vetzforpetz.estore.Model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 public class AdminOrders {
     private String name, phone, address, city, state, date, time, totalAmount, orderNumber;
@@ -206,6 +210,14 @@ public class AdminOrders {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public List<Cart> getListOfLineItems() {
+        List<Cart> lineItemsList = new ArrayList<>();
+        for (Map.Entry lineItem : lineItems.entrySet()) {
+            lineItemsList.add((Cart)lineItem.getValue());
+        }
+        return lineItemsList;
     }
 
     @Override

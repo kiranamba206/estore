@@ -232,7 +232,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         }
 
         final HashMap<String, Object> ordersMap = new HashMap<>();
-        ordersMap.put(orderNumber, mAdminOrder);
+        ordersMap.put("O"+mPrevalent.getCurrentOnlineUser().getPhone() + "-" + orderNumber, mAdminOrder);
 
 
         Log.v(TAG, "Order object created : " + ordersMap);
@@ -272,7 +272,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference()
                             .child("Cart List")
                             .child("Admin View")
-                            .child(mPrevalent.getCurrentOnlineUser().getPhone())
+                            //.child(mPrevalent.getCurrentOnlineUser().getPhone())
                             .updateChildren(ordersMap)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

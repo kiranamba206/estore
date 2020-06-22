@@ -61,6 +61,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
                 .child("Cart List").child("Admin View").child(userID).child(orderNumber);
 
         Log.v(TAG, "Intent variables userId=" + userID + " ordernumber =" + orderNumber);
+        /*
         for (AdminOrders tempOrder: prevalentOrdersForAdmins.getOrdersToBeProcessed().getOrdersList()){
 
         }
@@ -75,7 +76,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
             }
             Log.v(TAG, "iterator" + tempOrder);
         }
-
+*/
 //        iterator = activeOrder.getLineItems().entrySet().iterator();
 
 
@@ -180,14 +181,17 @@ public class AdminUserProductsActivity extends AppCompatActivity {
     {
         super.onStart();
 
-        FirebaseRecyclerOptions<Cart> options =
-                new FirebaseRecyclerOptions.Builder<Cart>()
-                        .setQuery(cartListRef, Cart.class)
+        FirebaseRecyclerOptions<AdminOrders> options =
+                new FirebaseRecyclerOptions.Builder<AdminOrders>()
+                        .setQuery(cartListRef, AdminOrders.class)
                         .build();
 
-        FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
+
+        FirebaseRecyclerAdapter<AdminOrders, CartViewHolder> adapter =
+                            new FirebaseRecyclerAdapter<AdminOrders, CartViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull Cart model)
+            protected void onBindViewHolder(@NonNull CartViewHolder holder, int position,
+                                            @NonNull AdminOrders model)
             {
                 holder.txtProductQuantity.setText("Quantity : " + model.getQuantity());
                 holder.txtProductPrice.setText("Price " + model.getPrice() + "Rs");
@@ -198,7 +202,8 @@ public class AdminUserProductsActivity extends AppCompatActivity {
             @Override
             public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
             {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_items_layout, parent, false);
+                View view = LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.cart_items_layout, parent, false);
                 CartViewHolder holder = new CartViewHolder(view);
                 return holder;
             }

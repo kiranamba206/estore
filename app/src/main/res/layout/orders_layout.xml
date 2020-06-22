@@ -9,8 +9,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:layout_margin="20dp"
-    android:elevation="5dp"
+    android:layout_marginHorizontal="10dp"
+    android:elevation="10dp"
     android:background="@color/design_default_color_background"
     android:stretchColumns="0,1"
     >
@@ -157,6 +157,21 @@
             />
     </TableRow>
     <TableRow>
+        <Button
+            android:id="@+id/save_changes_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Save Changes"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_column="0"
+            android:visibility="invisible"
+            >
+
+        </Button>
         <TextView
             android:id="@+id/approved_date_time"
             android:layout_width="0dp"
@@ -209,6 +224,14 @@
             android:layout_weight="1"
             android:visibility="invisible"
             />
+    </TableRow>
+    <TableRow>
+        <ListView
+            android:id="@+id/order_line_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </ListView>
     </TableRow>
     </TableLayout>
 </LinearLayout>

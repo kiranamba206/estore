@@ -68,7 +68,9 @@ public  class DatePickerFragment extends DialogFragment
                                                    TextView viewToUpdateDateAfterSetting,
                                                    Date dateToInitialize){
         this.viewToUpdateAfterUserSetsDate= viewToUpdateDateAfterSetting;
-        this.initDate = dateToInitialize;
+        if (dateToInitialize != null ) {
+            this.initDate = dateToInitialize;
+        }
 
         this.show(fragmentManager, tag);
     }

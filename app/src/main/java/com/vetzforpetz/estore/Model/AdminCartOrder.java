@@ -5,35 +5,69 @@ import java.util.HashMap;
 import java.util.List;
 
 public class AdminCartOrder {
-    private List<AdminOrders> ordersList; // will be of the form userId+orderNumber (String), AdminOrders
-    private HashMap<String, String> orderNumberToUserId; //will map userId and OrderNumber
+
+
+    //------------ Commenting below to try to use FirebaseUI recycleView Adapter on AdminNewOrderActivity
+
+    /*private HashMap<String, AdminOrders> ordersToBeProcessed;
+
+    public void addOrderToBeProcessed(String orderNumber, AdminOrders order) {
+        if (ordersToBeProcessed == null) {
+            ordersToBeProcessed = new HashMap<>();
+        }
+        if (ordersToBeProcessed.containsKey(orderNumber)) {
+            ordersToBeProcessed.remove(orderNumber);
+        }
+        ordersToBeProcessed.put(orderNumber, order);
+    }
+
+    public HashMap<String, AdminOrders> getOrdersToBeProcessed() {
+        return ordersToBeProcessed;
+    }
+
+    public void setOrdersToBeProcessed(HashMap<String, AdminOrders> ordersToBeProcessed) {
+        this.ordersToBeProcessed = ordersToBeProcessed;
+    }
+
+    @Override
+    public String toString() {
+        return "AdminCartOrder{" +
+                "ordersToBeProcessed=" + ordersToBeProcessed +
+                '}';
+    }*/
+
+
+    private List<AdminOrders> ordersToBeProcessed; // will be of the form userId+orderNumber (String), AdminOrders
+    //private HashMap<String, String> orderNumberToUserId; //will map userId and OrderNumber
 
     public AdminCartOrder() {
-        ordersList = new ArrayList<>();
-        orderNumberToUserId = new HashMap<>();
+        ordersToBeProcessed = new ArrayList<>();
+    //    orderNumberToUserId = new HashMap<>();
     }
 
-    public void addItemToOrderList( AdminOrders orderDetail) {
+    public void addOrderToBeProcessed( AdminOrders orderDetail) {
 
-        ordersList.add(orderDetail);
+        ordersToBeProcessed.add(orderDetail);
     }
 
 
 
 
-    public List< AdminOrders> getOrdersList() {
-        return ordersList;
+    public List< AdminOrders> getOrdersToBeProcessed() {
+        return ordersToBeProcessed;
     }
 
-    public void setOrdersList(List<AdminOrders> ordersList) {
-        this.ordersList = ordersList;
+    public void setOrdersToBeProcessed(List<AdminOrders> ordersList) {
+        this.ordersToBeProcessed = ordersList;
 
     }
 
     @Override
     public String toString() {
         return "AdminCartOrder{" +
-                ", ordersList=" + ordersList +
+                ", ordersList=" + ordersToBeProcessed +
                 '}';
     }
+
+
 }
