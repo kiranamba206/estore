@@ -56,6 +56,11 @@ public class LoginActivity extends AppCompatActivity
         // Details - https://github.com/pilgr/Paper
         Paper.init(this);
 
+        if(Paper.book().read("isRememberMeChecked", false)) {
+            chkBoxRememberMe.setCheckedImmediately(true);
+        } else {
+            chkBoxRememberMe.setCheckedImmediately(false);
+        }
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +126,11 @@ public class LoginActivity extends AppCompatActivity
         {
             Paper.book().write(mPrevalent.getUserPhoneKey(), phone);
             Paper.book().write(mPrevalent.getUserPasswordKey(), password);
+            Paper.book().write("isRememberMeChecked", true);
+        } else {
+            Paper.book().write(mPrevalent.getUserPhoneKey(), "");
+            Paper.book().write(mPrevalent.getUserPasswordKey(), "");
+            Paper.book().write("isRememberMeChecked", false);
         }
 
         final DatabaseReference RootRef;
