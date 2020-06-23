@@ -3,14 +3,14 @@ package com.vetzforpetz.estore;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.Group;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.os.Parcelable;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +22,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.firebase.ui.database.SnapshotParser;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -44,6 +41,7 @@ import com.vetzforpetz.estore.Model.Cart;
 import com.vetzforpetz.estore.Model.Users;
 import com.vetzforpetz.estore.Prevalent.Prevalent;
 import com.vetzforpetz.estore.Prevalent.PrevalentOrdersForAdmins;
+import com.vetzforpetz.estore.utils.ListViewHeightUtil;
 
 
 import java.text.SimpleDateFormat;
@@ -133,11 +131,14 @@ public class AdminNewOrderActivity extends AppCompatActivity {
                         List<AdminOrders> order = new ArrayList<>();
                         order.add(tempOrder.getValue(AdminOrders.class));
                         int i = order.size()-1;
+                        String title = order.get(i).getName()
+                                + " mob:" + order.get(i).getPhone()
+                                + "\norder#" + order.get(i).getOrderNumber()
+                                + "\n" + order.get(i).getFulfillmentMethod()
+                                + "- Status:" + order.get(i).getState();
                         prevalentOrdersForAdmins.getOrdersToBeProcessed().addOrderToBeProcessed(order.get(i));
                         adminOrderExpandableGroupList.add(new AdminOrderExpandableGroup(
-                                        order.get(i).getName() + " " + order.get(i).getOrderNumber()
-                                                + " " + order.get(i).getFulfillmentMethod()
-                                                + "-" + order.get(i).getState(),
+                                        title,
                                         order
                                          ));
 
@@ -346,20 +347,10 @@ public class AdminNewOrderActivity extends AppCompatActivity {
      }
  }
 
- class OrderLineItemsViewHolder extends ChildViewHolder {
-     public TextView productNameText, productQuantityText, customMessageText, productPriceText;
 
 
-     public OrderLineItemsViewHolder(View itemView) {
-         super(itemView);
-         productNameText = itemView.findViewById(R.id.cart_item_product_name);
-         productQuantityText = itemView.findViewById(R.id.cart_item_product_quantity);
-         customMessageText = itemView.findViewById(R.id.cart_item_custom_message);
-         productPriceText = itemView.findViewById(R.id.cart_item_product_price);
-     }
- }
-
- class ExpandableOrderListRecyclerAdapter extends ExpandableRecyclerViewAdapter<OrderLevelGroupViewHolder,AdminOrdersViewHolder> {
+ class ExpandableOrderListRecyclerAdapter extends
+         ExpandableRecyclerViewAdapter<OrderLevelGroupViewHolder,AdminOrdersViewHolder>{
     Context currentContext;
      public ExpandableOrderListRecyclerAdapter(List<? extends ExpandableGroup> groups) {
          super(groups);
@@ -367,7 +358,7 @@ public class AdminNewOrderActivity extends AppCompatActivity {
 
      @Override
      public OrderLevelGroupViewHolder onCreateGroupViewHolder(ViewGroup parent, int viewType) {
-         currentContext = parent.getContext();
+         this.currentContext = parent.getContext();
          LayoutInflater inflater = LayoutInflater.from(currentContext);
 
          // Inflate the custom layout
@@ -380,7 +371,7 @@ public class AdminNewOrderActivity extends AppCompatActivity {
 
      @Override
      public AdminOrdersViewHolder onCreateChildViewHolder(ViewGroup parent, int viewType) {
-         currentContext = parent.getContext();
+         this.currentContext = parent.getContext();
          LayoutInflater inflater = LayoutInflater.from(currentContext);
 
          // Inflate the custom layout
@@ -519,10 +510,6 @@ public class AdminNewOrderActivity extends AppCompatActivity {
                                 final HashMap<String, Object> ordersMap = new HashMap<>();
                                 ordersMap.put("O"+orderRow.getPhone()+"-"+orderRow.getOrderNumber(),
                                                 orderRow);
-                                /*FirebaseDatabase.getInstance().getReference()
-                                         .child("Cart List")
-                                         .child("Admin View")*/
-                                         //.child(mPrevalent.getCurrentOnlineUser().getPhone())
                                  ordersRef.updateChildren(ordersMap)
                                          .addOnCompleteListener(new OnCompleteListener<Void>() {
                                              @Override
@@ -565,11 +552,12 @@ public class AdminNewOrderActivity extends AppCompatActivity {
          }
 
          //TODO: Get the line Items to show
-         /*ArrayAdapter adapter = new ArrayAdapter<Cart> (
+         ArrayAdapter adapter = new OrderLineItemsAdapter (
                         this.currentContext,
                         R.layout.cart_items_layout,
-                        orderRow.getListOfLineItems());
-         holder.lineItemsListView.setAdapter(adapter);*/
+                        orderRow.getArrayListOfLineItems());
+         holder.lineItemsListView.setAdapter(adapter);
+         ListViewHeightUtil.setListViewHeightBasedOnChildren(holder.lineItemsListView);
 
      }
 
@@ -581,4 +569,58 @@ public class AdminNewOrderActivity extends AppCompatActivity {
      }
  }
 
+class OrderLineItemsAdapter extends ArrayAdapter<Cart> {
+
+    private ArrayList<Cart> dataSet;
+    Context mContext;
+    int layout;
+    String TAG = "OrderLineItemsAdapter";
+    private static class OrderLineItemsViewHolder {
+        public TextView productNameText, productQuantityText, customMessageText, productPriceText;
+    }
+
+    public OrderLineItemsAdapter(Context context, int layout, ArrayList<Cart> data) {
+        super(context, layout, data);
+        Log.v (TAG, "constructor data size received = " + data.size());
+        for (int i = 0; i< data.size(); i++) {
+            Log.v(TAG, "index = " + i + " data = " + data.get(i));
+        }
+        this.layout = layout;
+        this.dataSet = data;
+        this.mContext=context;
+    }
+
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        //get Data from the position
+        Log.v (TAG, "getView, position =" + position);
+        Cart cartItem = getItem(position);
+        OrderLineItemsViewHolder viewHolder;
+
+
+        if (convertView == null) {
+            viewHolder = new OrderLineItemsViewHolder();
+            //since convertView is null, we have to initialize it first
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            convertView = inflater.inflate(layout, parent, false);
+            // initializing the view with the layout elements
+            viewHolder.productNameText = convertView.findViewById(R.id.cart_item_product_name);
+            viewHolder.productQuantityText = convertView.findViewById(R.id.cart_item_product_quantity);
+            viewHolder.customMessageText = convertView.findViewById(R.id.cart_item_custom_message);
+            viewHolder.productPriceText = convertView.findViewById(R.id.cart_item_product_price);
+
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (OrderLineItemsViewHolder) convertView.getTag();
+        }
+
+        viewHolder.productNameText.setText(cartItem.getPname());
+        viewHolder.productQuantityText.setText(cartItem.getQuantity());
+        viewHolder.customMessageText.setText(cartItem.getCustomMessage());
+        viewHolder.productPriceText.setText(cartItem.getPrice());
+
+        return convertView;
+    }
+}
 

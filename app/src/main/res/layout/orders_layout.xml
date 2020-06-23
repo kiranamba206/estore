@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
 <TableLayout
+    android:id="@+id/order_table_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="10dp"
     android:layout_marginHorizontal="10dp"
     android:elevation="10dp"
     android:background="@color/design_default_color_background"
     android:stretchColumns="0,1"
     >
-
         <TableRow>
             <TextView
                 android:id="@+id/order_number"
@@ -230,8 +230,12 @@
             android:id="@+id/order_line_item_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
             >
         </ListView>
     </TableRow>
+
     </TableLayout>
-</LinearLayout>
+
+</RelativeLayout>

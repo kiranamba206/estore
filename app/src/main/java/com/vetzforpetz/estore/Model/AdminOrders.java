@@ -220,6 +220,14 @@ public class AdminOrders {
         return lineItemsList;
     }
 
+    public ArrayList<Cart> getArrayListOfLineItems() {
+        ArrayList<Cart> lineItemsList = new ArrayList<>();
+        for (Map.Entry lineItem : lineItems.entrySet()) {
+            lineItemsList.add((Cart)lineItem.getValue());
+        }
+        return lineItemsList;
+    }
+
     @Override
     public String toString() {
         return "AdminOrders{" +
