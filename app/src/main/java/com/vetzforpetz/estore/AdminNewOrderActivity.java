@@ -503,6 +503,7 @@ public class AdminNewOrderActivity extends AppCompatActivity {
                                 DatabaseReference ordersRef;
                                 ordersRef = prevalentOrdersForAdmins.getOrdersDataRef();
                                 orderRow.setState(selectedOrderStatus);
+                                orderRow.setOrderStatusCode(prevalentOrdersForAdmins.getOrderStatusCode(selectedOrderStatus));
                                 if (orderRow.getFulfillmentMethod().equals("Delivery")) {
                                     String selectedDeliveryAdmin = holder.deliveredBySpinner.getSelectedItem().toString();
                                     orderRow.setDeliveryAdminName(selectedDeliveryAdmin);
