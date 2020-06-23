@@ -23,7 +23,7 @@
             android:title="Settings" />
         <item
             android:id="@+id/nav_order_history"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_gallery"
             android:title="Order History" />
         <item
             android:id="@+id/nav_logout"
