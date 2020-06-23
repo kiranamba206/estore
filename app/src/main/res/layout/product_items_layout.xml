@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Product Name"
             android:textAlignment="center"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
             />
