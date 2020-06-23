@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,7 +23,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="142dp"
         android:layout_marginEnd="80dp"
-        android:text="One Stop Shop For Pet Needs."
+        android:text="@string/app_slogan_text"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
@@ -42,7 +41,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/buttons"
         android:padding="20dp"
-        android:text="Already have an Account? Login"
+        android:text="@string/ALREADY_HAVE_ACCOUNT"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
@@ -57,7 +56,7 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/input_design"
         android:padding="20dp"
-        android:text="Join Now"
+        android:text="@string/JOIN_NOW"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp" />
