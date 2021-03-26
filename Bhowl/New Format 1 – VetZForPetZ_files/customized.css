@@ -1,0 +1,119 @@
+
+div.wp-block-coblocks-hero__content {
+	max-width:600px; 
+	margin-left: 180px
+}
+
+div.wp-block-buttons {
+	padding-top: 100px;
+}
+div.wp-block-button h2 {
+	 
+	
+}
+
+div.wp-block-button a.wp-block-button__link {
+	width:130px; 
+	display:block 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+	line-height: 0.65em;
+	padding: 1px 1px 1px 2px;
+
+}
+
+form.contact-form button {
+	margin: 15px;
+}
+
+form div.horizontal_entries{
+	width: 100%;
+	display: table;
+	padding-top:20px; 
+	padding-bottom: 20px;
+}
+
+
+form div.select_breed, form div.select_age, form div.select_weight {
+	display: table-cell;
+}
+
+form div.grunion-field-wrap {
+	padding-top: 10px;
+}
+
+form div.grunion-field-wrap label {
+	padding-right: 10px;
+}
+
+div.tile {
+	border-color: 
+}
+
+div.tile p#MenuList {
+	padding-bottom:20px
+}
+
+div.wp-block-jetpack-layout-grid {
+	display: table;
+
+}
+
+div.table-header-row  {
+	display: table-header-group;
+	padding-top: 5px;
+	padding-bottom: 5px
+
+
+
+}
+
+div.table-cell {
+	display: table-cell;
+	padding: 5px;
+	width: 45%;
+}
+
+div.table-cell-content:hover {
+	background-color: #C7AD96;
+}
+
+div.table-cell-content {
+	display: flex;
+	height: 380px;
+    border: 1px dashed brown;
+}
+
+div.wp-block-media-text.table-row-1
+,div.wp-block-media-text.table-row-2
+,div.wp-block-media-text.table-row-3
+, div.wp-block-media-text.table-row-4 {
+	display: table-row;
+	
+
+}
+
+div.table-cell img {
+	flex-basis: 40%;
+	align-content: left;
+	justify-content: center;
+	padding-right: 10px;
+}
+
+div.table-cell span.wp-block-media-text__content.cell_text_content {
+	width: 70%;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+    flex-direction: column;
+    text-align: left;s
+
+}
+
+div.table-cell div.wp-block-buttons {
+	padding-top: 1px;
+}
