@@ -117,3 +117,32 @@ div.table-cell span.wp-block-media-text__content.cell_text_content {
 div.table-cell div.wp-block-buttons {
 	padding-top: 1px;
 }
+
+div.WhatsInTheBowl.footer-content div.wp-block-columns div.table-row {
+	width:100%;
+	display: table-row;
+}
+
+
+div.WhatsInTheBowl.footer-content div.wp-block-columns div.table-cell {
+	
+	display: table-cell;
+	width: 20%;
+}
+
+div.WhatsInTheBowl.footer-content {
+	display:table;
+	table-layout: fixed;
+}
+
+div.WhatsInTheBowl.footer-content div.wp-block-columns div.highlight-points-mid-left, 
+div.WhatsInTheBowl.footer-content div.wp-block-columns div.highlight-points-mid-right
+
+ {
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: dashed;
+    border-right-width: 1px;
+    border-right-color: darkgray;
+    border-right-style: dashed;
+}
