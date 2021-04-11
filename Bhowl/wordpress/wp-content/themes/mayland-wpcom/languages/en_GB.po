@@ -1,0 +1,97 @@
+# Translation of WordPress.com - Themes - Mayland in English (UK)
+# This file is distributed under the same license as the WordPress.com - Themes - Mayland package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-09-04 15:01:07+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: WordPress.com - Themes - Mayland\n"
+
+#: inc/wpcom-colors.php:368 inc/wpcom-editor-colors.php:224
+msgid "Secondary Color"
+msgstr "Secondary Colour"
+
+#: inc/wpcom-colors.php:351 inc/wpcom-editor-colors.php:208
+msgid "Text Color"
+msgstr "Text Colour"
+
+#: inc/wpcom-colors.php:186 inc/wpcom-editor-colors.php:107
+msgid "Link Color"
+msgstr "Link Colour"
+
+#: inc/wpcom-colors.php:101 inc/wpcom-editor-colors.php:67
+msgid "Background Color"
+msgstr "Background Colour"
+
+#: functions.php:99
+msgid "Foreground Dark"
+msgstr "Foreground Dark"
+
+#: functions.php:94
+msgid "Foreground Light"
+msgstr "Foreground Light"
+
+#: functions.php:89
+msgid "Foreground"
+msgstr "Foreground"
+
+#: functions.php:84
+msgid "Background"
+msgstr "Background"
+
+#. Description of the plugin/theme
+#: wp-content/themes/pub/mayland/style.css
+msgid "Make your online portfolio wonderfully uncluttered with Mayland. Gracefully highlight your photography and other projects. Mayland is versatile enough to be your personal site too."
+msgstr "Make your online portfolio wonderfully uncluttered with Mayland. Gracefully highlight your photography and other projects. Mayland is versatile enough to be your personal site too."
+
+#. Translators: If there are characters in your language that are not supported
+#. by Poppins, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:130
+msgctxt "Poppins font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:79
+msgid "Secondary"
+msgstr "Secondary"
+
+#: functions.php:74
+msgid "Primary"
+msgstr "Primary"
+
+#: functions.php:49
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:48
+msgid "Huge"
+msgstr "Huge"
+
+#: functions.php:43
+msgid "L"
+msgstr "L"
+
+#: functions.php:42
+msgid "Large"
+msgstr "Large"
+
+#: functions.php:37
+msgid "M"
+msgstr "M"
+
+#: functions.php:36
+msgid "Normal"
+msgstr "Normal"
+
+#: functions.php:31
+msgid "S"
+msgstr "S"
+
+#: functions.php:30
+msgid "Small"
+msgstr "Small"

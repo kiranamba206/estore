@@ -1,0 +1,245 @@
+{
+    "settings": {
+        "options": {
+            "show_on_front": "page",
+            "featured-content": false
+        },
+        "theme_mods": {
+            "0": false,
+            "nav_menu_locations": {
+                "menu-1": "primary",
+                "social": "social-links",
+                "menu-2": "primary"
+            },
+            "custom_css_post_id": -1,
+            "hide_front_page_title": true,
+            "custom_logo": ""
+        },
+        "headstart": {
+            "mapped_id_options": [],
+            "mapped_id_theme_mods": [],
+            "keep_submenu_items": true
+        }
+    },
+    "widgets": [],
+    "content": [
+        {
+            "post_type": "post",
+            "post_title": "Mengatasi Batasan Kedalaman Bidang",
+            "post_content": "<!-- wp:paragraph -->\n<p>Beberapa metode dan peralatan memungkinkan Anda mengubah DOF (kedalaman bidang) yang terlihat jelas, dan beberapa bahkan memungkinkan untuk DOF ditentukan setelah gambar dibuat. Misalnya, teknik Penumpukan fokus menggabungkan beberapa gambar yang fokus pada bidang permukaan berbeda, menghasilkan sebuah gambar dengan kedalaman bidang yang tampak jelas lebih besar (atau lebih kecil, jika ingin) daripada gambar aslinya. Serupa dengan teknik tersebut, untuk dapat merekonstruksi bentuk 3 dimensi dari suatu objek, bisa juga dibuat peta kedalaman dari beberapa foto yang memiliki kedalaman bidang berbeda. Metode ini disebut \"bentuk dari fokus\".</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Teknologi lainnya menggunakan kombinasi desain lensa dan pengeditan: Koding muka gelombang adalah metode yang digunakan untuk menambahkan aberasi terkontrol ke sistem optik sehingga fokus dan kedalaman bidang dapat ditingkatkan nanti di saat pengeditan.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em>dari <a href=\"https://en.wikipedia.org/wiki/Depth_of_field#Overcoming_DOF_limitations\">artikel Wikipedia</a> yang dirilis di bawah lisensi hak cipta&nbsp;<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-Share-Alike License 3.0.</a></em></p>\n<!-- /wp:paragraph -->",
+            "post_name": "overcoming-depth-of-field-limitations",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 69,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Blog",
+            "post_content": "",
+            "post_name": "blog",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 51,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_blog_page"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Kontak",
+            "post_content": "<!-- wp:columns {\"className\":\"has-2-columns\"} -->\n<div class=\"wp-block-columns has-2-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:jetpack/contact-info -->\n<div class=\"wp-block-jetpack-contact-info\"><!-- wp:jetpack/address {\"address\":\"10 Street Road\",\"city\":\"City\",\"postal\":\"10100\",\"country\":\"USA\"} -->\n<div class=\"wp-block-jetpack-address\"><div class=\"jetpack-address__address jetpack-address__address1\">Jalan Sudirman No.10</div><div><span class=\"jetpack-address__city\">Kota</span>, <span class=\"jetpack-address__region\"></span> <span class=\"jetpack-address__postal\">10100</span></div><div class=\"jetpack-address__country\">Indonesia</div></div>\n<!-- /wp:jetpack/address -->\n\n<!-- wp:jetpack/email {\"email\":\"mail@example.com\"} -->\n<div class=\"wp-block-jetpack-email\"><a href=\"mailto:mail@example.com\">mail@contoh.com</a></div>\n<!-- /wp:jetpack/email -->\n\n<!-- wp:jetpack/phone {\"phone\":\"(555) 555 1234\"} -->\n<div class=\"wp-block-jetpack-phone\"><a href=\"tel:5555551234\">(555) 555 1234</a></div>\n<!-- /wp:jetpack/phone --></div>\n<!-- /wp:jetpack/contact-info --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:jetpack/contact-form -->\n<!-- wp:jetpack/field-name {\"required\":true} /-->\n\n<!-- wp:jetpack/field-email {\"label\":\"Email\",\"required\":true} /-->\n\n<!-- wp:jetpack/field-url /-->\n\n<!-- wp:jetpack/field-textarea {\"required\":true} /-->\n<!-- /wp:jetpack/contact-form --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->",
+            "post_name": "contact",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 26,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Beranda",
+            "post_content": "<!-- wp:group {\"backgroundColor\":\"background\",\"align\":\"full\"} -->\n<div class=\"wp-block-group alignfull has-background-background-color has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:coblocks/gallery-masonry {\"linkTo\":\"media\",\"align\":\"full\",\"gutter\":30,\"gridSize\":\"lrg\"} -->\n<div class=\"wp-block-coblocks-gallery-masonry alignfull\"><div class=\"coblocks-gallery has-caption-style-dark has-gutter\"><ul class=\"has-grid-lrg has-gutter-30 has-gutter-mobile-15\"><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg?w=683\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg?w=683\" alt=\"\" data-id=\"100\" data-link=\"https://maylanddemo.wordpress.com/home/yannes-kiefer-vzfsq4tqthy-unsplash-minified/\" class=\"wp-image-100\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"102\" data-link=\"https://maylanddemo.wordpress.com/home/eddy-klaus-bhnxfaencti-unsplash-minified/\" class=\"wp-image-102\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg?w=682\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg?w=682\" alt=\"\" data-id=\"103\" data-link=\"https://maylanddemo.wordpress.com/home/paola-aguilar-lkqhgsvzfsk-unsplash-minified/\" class=\"wp-image-103\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg?w=684\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg?w=684\" alt=\"\" data-id=\"104\" data-link=\"https://maylanddemo.wordpress.com/home/nino-ubezio-2580l2jw4qk-unsplash-minified/\" class=\"wp-image-104\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"105\" data-link=\"https://maylanddemo.wordpress.com/home/griffin-taylor-fwzg7xfav-w-unsplash-minified/\" class=\"wp-image-105\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"106\" data-link=\"https://maylanddemo.wordpress.com/home/jeison-higuita-80meoxgb0n0-unsplash-minified/\" class=\"wp-image-106\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg?w=683\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg?w=683\" alt=\"\" data-id=\"107\" data-link=\"https://maylanddemo.wordpress.com/home/rene-bohmer-1odk5-rmata-unsplash-minified/\" class=\"wp-image-107\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg?w=684\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg?w=684\" alt=\"\" data-id=\"108\" data-link=\"https://maylanddemo.wordpress.com/home/steve-long-k53cu6aycz4-unsplash-minified/\" class=\"wp-image-108\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg?w=724\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg?w=724\" alt=\"\" data-id=\"109\" data-link=\"https://maylanddemo.wordpress.com/home/yoshua-giri-65bbd4hlzgk-unsplash-minified/\" class=\"wp-image-109\"  /></a></figure></li></ul></div></div>\n<!-- /wp:coblocks/gallery-masonry --></div></div>\n<!-- /wp:group -->",
+            "post_name": "home",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 5,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_front_page"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Tentang",
+            "post_content": "<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:paragraph {\"fontSize\":\"huge\"} -->\n<p class=\"has-huge-font-size\">Saya seorang fotografer yang tinggal di New York dan bekerja ke berbagai penjuru dunia.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\">Fotografer yang percaya diri dan berdedikasi dengan pengalaman baik dalam fotografi profesional maupun lepas. Menjalani hampir 10 tahun pengalaman bekerja dengan berbagai macam fotografi agar dapat menangani setiap pekerjaan dengan cepat dan efisien. Terbiasa dengan detail dalam mengambil foto digital kualitas tinggi, termasuk framing, memilih dan mengatur pencahayaan, dan menentukan rana lanjutan dan pilihan lensa. Mengutamakan komunikasi dalam pekerjaan untuk menghindari kesalahan. Kandidat yang memadukan karier panjang profesional dengan idealisme dan loyalitas fotografi lepas.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->",
+            "post_name": "about",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "open",
+            "hs_old_id": 1,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "post",
+            "post_title": "Pencahayaan Kupu-kupu",
+            "post_content": "<!-- wp:paragraph -->\n<p>Pencahayaan kupu-kupu hanya menggunakan dua lampu. Lampu utama diletakkan langsung di depan subjek, sering kali di atas kamera atau agak condong ke satu sisi, dan sedikit lebih tinggi dari biasanya untuk rencana pencahayaan tiga titik. Lampu kedua adalah lampu rim.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Sering kali reflektor diletakkan di bawah wajah subjek untuk memberikan cahaya pengisi dan bayangan lembut.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Pencahayaan ini ditandai dengan cahaya yang kuat yang jatuh di dahi, jembatan hidung, pipi atas, dan dengan bayangan unik di bawah hidung yang sering kali tampak seperti kupu-kupu, yang kemudian dijadikan nama untuk teknik pencahayaan ini.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Pencahayaan kupu-kupu adalah favorit dari fotografer potret terkenal asal Hollywood, George Hurrell, dan karenanya gaya pencahayaan ini sering juga disebut dengan pencahayaan Paramount.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em>Dari <a href=\"https://en.wikipedia.org/wiki/Portrait_photography#Butterfly_lighting\">artikel Wikipedia</a> yang dirilis di bawah lisensi hak cipta&nbsp;<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-Share-Alike License 3.0.</a></em></p>\n<!-- /wp:paragraph -->",
+            "post_name": "butterfly-lighting",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 78,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "post",
+            "post_title": "Potret Cahaya Jendela",
+            "post_content": "<!-- wp:paragraph -->\n<p>Jendela sebagai sumber cahaya untuk potret telah digunakan selama puluhan tahun sebelum sumber cahaya buatan ditemukan. Menurut Arthur Hammond, fotografer amatir dan profesional hanya butuh dua hal untuk pencahayaan potret: jendela dan reflektor. Meskipun cahaya jendela membatasi pilihan fotografi potret jika dibandingkan dengan cahaya buatan, cahaya jendela ini memberikan ruang yang cukup untuk fotografer amatir melakukan ekperimentasi. Reflektor putih yang dipasang untuk memantulkan cahaya ke sisi yang gelap dari wajah subjek, akan menghasilkan kontras. Kecepatan rana yang mungkin lebih lambat dari kondisi normal, mengharuskan penggunaan tripod, tetapi pencahayaannya akan jadi penuh dan lembut menawan.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Waktu terbaik untuk mengambil potret cahaya jendela yaitu di jam-jam awal tengah hari dan akhir sore hari ketika cahaya lebih intens di jendela. Tirai, reflektor, dan penutup pengurang intensitas digunakan untuk memberikan cahaya lembut. Sedangkan cermin dan kaca dapat digunakan untuk pencahayaan terang. Terkadang kaca berwarna, filter, dan objek pemantul dapat digunakan untuk memberi potret efek warna yang diinginkan. Komposisi bayangan dan cahaya lembut memberikan efek unik pada potret cahaya jendela, membuatnya berbeda dengan potret yang dibuat dengan cahaya artifisial.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em>Dari <a href=\"https://en.wikipedia.org/wiki/Portrait_photography#Windowlight_portraiture\">artikel Wikipedia</a> yang dirilis di bawah lisensi hak cipta&nbsp;<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-Share-Alike License 3.0.</a></em></p>\n<!-- /wp:paragraph -->",
+            "post_name": "windowlight-portraiture",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 72,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        }
+    ],
+    "menus": {
+        "primary": {
+            "name": "Utama",
+            "items": [
+                {
+                    "menu-item-title": "Beranda",
+                    "menu-item-db-id": 29,
+                    "menu-item-object-id": "5",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 1,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "Tentang",
+                    "menu-item-db-id": 31,
+                    "menu-item-object-id": "1",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 2,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "Blog",
+                    "menu-item-db-id": 53,
+                    "menu-item-object-id": "51",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 3,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "Kontak",
+                    "menu-item-db-id": 30,
+                    "menu-item-object-id": "26",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 4,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                }
+            ]
+        },
+        "social-links": {
+            "name": "Tautan Sosial",
+            "items": [
+                {
+                    "menu-item-title": "Instagram",
+                    "menu-item-db-id": 33,
+                    "menu-item-object-id": "33",
+                    "menu-item-object": "custom",
+                    "menu-item-type": "custom",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 1,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": "",
+                    "menu-item-url": "http://instagram.com"
+                },
+                {
+                    "menu-item-title": "Twitter",
+                    "menu-item-db-id": 34,
+                    "menu-item-object-id": "34",
+                    "menu-item-object": "custom",
+                    "menu-item-type": "custom",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 2,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": "",
+                    "menu-item-url": "http://twitter.com"
+                }
+            ]
+        }
+    },
+    "images": [
+        "https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/mayland-logo-small.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo_m-1.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo_m.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-logo_mayland.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_theme_logo.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-eddy-klaus-bhnxfaencti-unsplash.jpg"
+    ]
+}

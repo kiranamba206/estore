@@ -1,0 +1,390 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress.com - Themes - Varia\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-09T02:05:31+00:00\n"
+"PO-Revision-Date: 2021-03-08 18:40:27+0000\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+
+#: inc/wpcom-colors.php:216
+#: inc/wpcom-editor-colors.php:153
+msgid "Link Color"
+msgstr "Link kleur"
+
+#: inc/wpcom-colors.php:365
+#: inc/wpcom-editor-colors.php:229
+msgid "Text Color"
+msgstr "Tekstkleur"
+
+#: inc/wpcom-colors.php:381
+#: inc/wpcom-editor-colors.php:245
+msgid "Secondary Color"
+msgstr "Secundaire kleur"
+
+#: inc/wpcom.php:59
+msgid "Color Accessibility Warning"
+msgstr "Waarschuwing voor de toegankelijkheid van kleuren"
+
+#: inc/wpcom.php:61
+msgid "In order to ensure people can read your site, try to maintain a strong contrast ratio between the colors you choose here. <a href=\"%s\" target=\"_blank\">Learn more about color contrast</a>."
+msgstr "Kies voor een sterk contrast tussen de kleuren die je hier kan kiezen, zodat bezoekers de website goed kunnen lezen. <a href=\"%s\" target=\"_blank\">Leer meer over kleurcontrast</a>."
+
+#: functions.php:169
+msgid "Foreground"
+msgstr "Voorgrond"
+
+#: functions.php:174
+msgid "Background"
+msgstr "Achtergrond"
+
+#: inc/wpcom-colors.php:96
+#: inc/wpcom-editor-colors.php:82
+msgid "Background Color"
+msgstr "Achtergrondkleur"
+
+#: inc/woocommerce.php:212
+msgid "View your shopping list"
+msgstr "Bekijk je boodschappenlijst"
+
+#. translators: %s: Name of current post.
+#: inc/template-functions.php:182
+msgid "Continue reading %s"
+msgstr "Meer lezen over %s"
+
+#: inc/woocommerce.php:208
+msgid "Cart"
+msgstr "Winkelwagen"
+
+#: inc/woocommerce.php:106
+#: inc/woocommerce.php:142
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d item"
+msgstr[1] "%d items"
+
+#: inc/woocommerce.php:103
+#: inc/woocommerce.php:211
+msgid "View your shopping cart"
+msgstr "Bekijk je winkelwagen"
+
+#: image.php:25
+msgid "Previous Image"
+msgstr "Vorige afbeelding"
+
+#: image.php:26
+msgid "Next Image"
+msgstr "Volgende afbeelding"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/content-single.php:33
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Lees verder <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: post author
+#: template-parts/post/author-bio.php:17
+msgid "Published by %s"
+msgstr "Gepubliceerd door %s"
+
+#: template-parts/post/author-bio.php:26
+msgid "View more posts"
+msgstr "Bekijk meer berichten"
+
+#: template-parts/content/content-none.php:39
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Helaas, er waren geen overeenkomsten met jouw zoekterm. Probeer het opnieuw met enkele andere zoekwoorden."
+
+#: template-parts/content/content-none.php:46
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Het lijkt erop dat wij niet kunnen vinden wat jij zoekt. Wellicht helpt de zoekfunctie."
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content/content-none.php:26
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Klaar om je eerste bericht te publiceren? <a href=\"%1$s\">Start hier</a>."
+
+#: single.php:38
+msgid "Next Post"
+msgstr "Volgend bericht"
+
+#: single.php:39
+msgid "Next post:"
+msgstr "Volgend bericht:"
+
+#: single.php:41
+msgid "Previous Post"
+msgstr "Vorig bericht"
+
+#: single.php:42
+msgid "Previous post:"
+msgstr "Vorig bericht:"
+
+#: template-parts/content/content-excerpt.php:18
+#: template-parts/content/content-testimonial-excerpt.php:18
+#: template-parts/content/content.php:18
+msgctxt "post"
+msgid "Featured"
+msgstr "Uitgelicht"
+
+#: template-parts/content/content-none.php:16
+msgid "Nothing Found"
+msgstr "Niks gevonden"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:120
+#: inc/template-tags.php:185
+#: template-parts/content/content-page.php:40
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Bewerk <span class=\"screen-reader-text\">%s</span>"
+
+#: inc/template-tags.php:294
+msgid "Newer posts"
+msgstr "Nieuwere berichten"
+
+#: inc/template-tags.php:298
+msgid "Older posts"
+msgstr "Oudere berichten"
+
+#. translators: 1: search result title. 2: search term.
+#: search.php:25
+msgid "Search results for:"
+msgstr "Zoekresultaten voor:"
+
+#: inc/wpcom.php:49
+msgid "Check to hide the page title, if your homepage is set to display a static page."
+msgstr "Vink aan om de paginatitel te verbergen, als je homepagina is ingesteld op een statische pagina."
+
+#: inc/wpcom.php:48
+msgid "Hide Homepage Title"
+msgstr "Verberg titel homepagina"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:63
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Laat een reactie achter<span class=\"screen-reader-text\"> op %s</span>"
+
+#. translators: used between list items, there is a space after the comma.
+#: inc/template-tags.php:86
+#: inc/template-tags.php:98
+#: inc/template-tags.php:151
+#: inc/template-tags.php:163
+msgid ", "
+msgstr ", "
+
+#. translators: 1: SVG icon. 2: posted in label, only visible to screen
+#. readers. 3: list of categories.
+#: inc/template-tags.php:92
+#: inc/template-tags.php:157
+msgid "Posted in"
+msgstr "Geplaatst in"
+
+#. translators: 1: SVG icon. 2: posted in label, only visible to screen
+#. readers. 3: list of tags.
+#: inc/template-tags.php:104
+#: inc/template-tags.php:169
+msgid "Tags:"
+msgstr "Tags:"
+
+#: inc/template-functions.php:94
+msgid "Monthly Archives: "
+msgstr "Archief:"
+
+#: inc/template-functions.php:94
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: inc/template-functions.php:96
+msgid "Daily Archives: "
+msgstr "Dagelijks archief:"
+
+#. translators: %s: Post type singular name
+#. translators: %s: Taxonomy singular name
+#: inc/template-functions.php:100
+#: inc/template-functions.php:106
+msgid "%s Archives"
+msgstr "%s archief:"
+
+#: inc/template-functions.php:110
+msgid "Archives:"
+msgstr "Archieven:"
+
+#. translators: 1: SVG icon. 2: post author, only visible to screen readers. 3:
+#. author link.
+#: inc/template-tags.php:46
+msgid "Posted by"
+msgstr "Geplaatst door"
+
+#: image.php:76
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr "Volledige grootte"
+
+#: image.php:93
+msgctxt "Parent post link"
+msgid "<span class=\"meta-nav\">Published in</span><br><span class=\"post-title\">%title</span>"
+msgstr "<span class=\"meta-nav\">Gepubliceerd in</span><br><span class=\"post-title\">%title</span>"
+
+#: inc/template-functions.php:86
+msgid "Category Archives: "
+msgstr "Categorie archief:"
+
+#: inc/template-functions.php:88
+msgid "Tag Archives: "
+msgstr "Tag archief:"
+
+#: inc/template-functions.php:90
+msgid "Author Archives: "
+msgstr "Auteur archief:"
+
+#: inc/template-functions.php:92
+msgid "Yearly Archives: "
+msgstr "Jaarlijks archief:"
+
+#: inc/template-functions.php:92
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: image.php:58
+#: template-parts/content/content-page.php:26
+#: template-parts/content/content-single.php:46
+#: template-parts/content/content.php:36
+msgid "Pages:"
+msgstr "Pagina's:"
+
+#: image.php:62
+msgid "Page"
+msgstr "Pagina"
+
+#: header.php:60
+#: inc/woocommerce.php:210
+msgid "collapsed"
+msgstr "ingeklapt"
+
+#: header.php:59
+#: inc/woocommerce.php:209
+msgid "expanded"
+msgstr "uitgeklapt"
+
+#: header.php:36
+msgid "Skip to content"
+msgstr "Naar de inhoud springen"
+
+#: header.php:52
+msgid "Main Navigation"
+msgstr "Hoofdnavigatie"
+
+#: header.php:56
+msgid "Menu"
+msgstr "Menu"
+
+#: functions.php:205
+#: template-parts/footer/footer-widgets.php:12
+msgid "Footer"
+msgstr "Voettekst"
+
+#: functions.php:207
+msgid "Add widgets here to appear in your footer."
+msgstr "Voeg hier widgets toe die in de footer verschijnen."
+
+#: functions.php:118
+msgid "S"
+msgstr "S"
+
+#: functions.php:123
+msgid "Normal"
+msgstr "Normaal"
+
+#: functions.php:124
+msgid "M"
+msgstr "M"
+
+#: functions.php:129
+msgid "Large"
+msgstr "Groot"
+
+#: functions.php:130
+msgid "L"
+msgstr "L"
+
+#: functions.php:135
+msgid "Huge"
+msgstr "Groot"
+
+#: functions.php:136
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:164
+msgid "Secondary"
+msgstr "Secundair"
+
+#. translators: 1: WordPress link, 2: WordPress.
+#: footer.php:50
+msgid "https://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: functions.php:59
+#: functions.php:159
+msgid "Primary"
+msgstr "Primaire"
+
+#: footer.php:29
+#: functions.php:60
+msgid "Footer Menu"
+msgstr "Voettekstmenu"
+
+#: functions.php:61
+#: header.php:78
+msgid "Social Links Menu"
+msgstr "Socialelinksmenu"
+
+#: functions.php:117
+msgid "Small"
+msgstr "Klein"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Een gedachte over &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s gedachten over &ldquo;%2$s&rdquo;"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Reacties zijn gesloten."
+
+#: classes/class-varia-walker-comment.php:100
+msgid "Your comment is awaiting moderation."
+msgstr "Je reactie is in afwachting van moderatie."
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Het lijkt erop dat er niets gevonden is op deze locatie. Probeer het eens met een zoekopdracht?"
+
+#. translators: %s: comment author link
+#: classes/class-varia-walker-comment.php:67
+msgid "%s <span class=\"screen-reader-text says\">says:</span>"
+msgstr "%s <span class=\"screen-reader-text says\">zei:</span>"
+
+#. translators: 1: comment date, 2: comment time
+#: classes/class-varia-walker-comment.php:87
+msgid "%1$s at %2$s"
+msgstr "%1$s om %2$s"
+
+#: classes/class-varia-walker-comment.php:95
+msgid "Edit"
+msgstr "Bewerk"
+
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oeps! Die pagina kon niet worden gevonden."

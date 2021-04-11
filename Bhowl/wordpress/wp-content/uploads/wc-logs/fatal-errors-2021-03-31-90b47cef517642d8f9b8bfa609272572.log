@@ -1,0 +1,47 @@
+2021-03-31T20:29:09+00:00 CRITICAL Maximum execution time of 60 seconds exceeded in C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\Requests\Transport\fsockopen.php on line 246
+
+2021-03-31T20:59:31+00:00 CRITICAL Uncaught Error: Unknown named parameter $tasks_meta_id in C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php:292
+Stack trace:
+#0 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#2 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\actions\ActionScheduler_Action.php(22): do_action_ref_array('wpforms_admin_n...', Array)
+#3 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\abstracts\ActionScheduler_Abstract_QueueRunner.php(65): ActionScheduler_Action->execute()
+#4 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(162): ActionScheduler_Abstract_QueueRunner->process_action(12, 'WP Cron')
+#5 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(132): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#6 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(292): ActionScheduler_QueueRunner->run('WP Cron')
+#7 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#8 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#9 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-cron.php(138): do_action_ref_array('action_schedule...', Array)
+#10 {main}
+  thrown in C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php on line 292
+
+2021-03-31T21:01:34+00:00 CRITICAL Uncaught Error: Unknown named parameter $tasks_meta_id in C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php:292
+Stack trace:
+#0 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#2 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\actions\ActionScheduler_Action.php(22): do_action_ref_array('wpforms_admin_n...', Array)
+#3 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\abstracts\ActionScheduler_Abstract_QueueRunner.php(65): ActionScheduler_Action->execute()
+#4 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(162): ActionScheduler_Abstract_QueueRunner->process_action(14, 'WP Cron')
+#5 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(132): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#6 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(292): ActionScheduler_QueueRunner->run('WP Cron')
+#7 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#8 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#9 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-cron.php(138): do_action_ref_array('action_schedule...', Array)
+#10 {main}
+  thrown in C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php on line 292
+
+2021-03-31T21:09:39+00:00 CRITICAL Uncaught Error: Unknown named parameter $tasks_meta_id in C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php:292
+Stack trace:
+#0 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#2 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\actions\ActionScheduler_Action.php(22): do_action_ref_array('wpforms_admin_n...', Array)
+#3 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\abstracts\ActionScheduler_Abstract_QueueRunner.php(65): ActionScheduler_Action->execute()
+#4 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(162): ActionScheduler_Abstract_QueueRunner->process_action(15, 'WP Cron')
+#5 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(132): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#6 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(292): ActionScheduler_QueueRunner->run('WP Cron')
+#7 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#8 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#9 C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-cron.php(138): do_action_ref_array('action_schedule...', Array)
+#10 {main}
+  thrown in C:\Users\Murali-Alienware\Documents\Bhowl\wordpress\wp-includes\class-wp-hook.php on line 292
+

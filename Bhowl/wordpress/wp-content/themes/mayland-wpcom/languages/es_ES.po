@@ -1,0 +1,89 @@
+# Translation of WordPress.com - Themes - Mayland in Spanish (Spain)
+# This file is distributed under the same license as the WordPress.com - Themes - Mayland package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-08-21 01:06:33+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: es\n"
+"Project-Id-Version: WordPress.com - Themes - Mayland\n"
+
+#: inc/wpcom-colors.php:368 inc/wpcom-editor-colors.php:224
+msgid "Secondary Color"
+msgstr "Secondary Color"
+
+#: inc/wpcom-colors.php:186 inc/wpcom-editor-colors.php:107
+msgid "Link Color"
+msgstr "Color del enlace"
+
+#: inc/wpcom-colors.php:351 inc/wpcom-editor-colors.php:208
+msgid "Text Color"
+msgstr "Color del texto"
+
+#: functions.php:89
+msgid "Foreground"
+msgstr "Primer plano"
+
+#: inc/wpcom-colors.php:101 inc/wpcom-editor-colors.php:67
+msgid "Background Color"
+msgstr "Color de fondo"
+
+#: functions.php:84
+msgid "Background"
+msgstr "Fondo"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Poppins, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:130
+msgctxt "Poppins font: on or off"
+msgid "on"
+msgstr "on"
+
+#. Description of the plugin/theme
+#: wp-content/themes/pub/mayland/style.css
+msgid "Make your online portfolio wonderfully uncluttered with Mayland. Gracefully highlight your photography and other projects. Mayland is versatile enough to be your personal site too."
+msgstr "Haz un portfolio online que no parezca recargado con Mayland. Destaca con buen gusto tus fotografías y otros proyectos. Mayland también es lo suficientemente versátil como para ser tu sitio personal."
+
+#: functions.php:43
+msgid "L"
+msgstr "L"
+
+#: functions.php:48
+msgid "Huge"
+msgstr "Enorme"
+
+#: functions.php:49
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:74
+msgid "Primary"
+msgstr "Primario"
+
+#: functions.php:79
+msgid "Secondary"
+msgstr "Secundario"
+
+#: functions.php:30
+msgid "Small"
+msgstr "Pequeño"
+
+#: functions.php:31
+msgid "S"
+msgstr "S"
+
+#: functions.php:36
+msgid "Normal"
+msgstr "Normal"
+
+#: functions.php:37
+msgid "M"
+msgstr "M"
+
+#: functions.php:42
+msgid "Large"
+msgstr "Grande"

@@ -1,0 +1,245 @@
+{
+    "settings": {
+        "options": {
+            "show_on_front": "page",
+            "featured-content": false
+        },
+        "theme_mods": {
+            "0": false,
+            "nav_menu_locations": {
+                "menu-1": "primary",
+                "social": "social-links",
+                "menu-2": "primary"
+            },
+            "custom_css_post_id": -1,
+            "hide_front_page_title": true,
+            "custom_logo": ""
+        },
+        "headstart": {
+            "mapped_id_options": [],
+            "mapped_id_theme_mods": [],
+            "keep_submenu_items": true
+        }
+    },
+    "widgets": [],
+    "content": [
+        {
+            "post_type": "post",
+            "post_title": "被写界深度の制限を克服する",
+            "post_content": "<!-- wp:paragraph -->\n<p>一部の方法と装置では、見かけの DOF を変更できます。また、画像を作成したあとに DOF を決定できるものもあります。たとえば、多焦点合成では、異なる平面に焦点を合わせた複数の画像を組み合わせて、画像の見かけの被写界深度を個々のソース画像よりも大きく (または必要に応じて小さく) します。同様に、被写体の3次元形状を再構築するために、被写界深度の異なる複数の写真から深度マップを生成できます。この方法は「Shape From Focus 法」と呼ばれます。</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>他の技術では、レンズ設計と後処理を組み合わせて使用​​しています。Wavefront Coding は、制御された収差を光学系に追加する方法で、あとのプロセスで焦点と被写界深度を改善できます。</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em><a href=\"https://en.wikipedia.org/wiki/Depth_of_field#Overcoming_DOF_limitations\">Wikipedia の記事</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">クリエイティブ・コモンズ表示-継承ライセンス3.0</a>で発行)</em> より</p>\n<!-- /wp:paragraph -->",
+            "post_name": "overcoming-depth-of-field-limitations",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 69,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "ブログ",
+            "post_content": "",
+            "post_name": "blog",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 51,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_blog_page"
+        },
+        {
+            "post_type": "page",
+            "post_title": "お問い合わせ",
+            "post_content": "<!-- wp:columns {\"className\":\"has-2-columns\"} -->\n<div class=\"wp-block-columns has-2-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:jetpack/contact-info -->\n<div class=\"wp-block-jetpack-contact-info\"><!-- wp:jetpack/address {\"address\":\"10 Street Road\",\"city\":\"City\",\"postal\":\"10100\",\"country\":\"USA\"} -->\n<div class=\"wp-block-jetpack-address\"><div class=\"jetpack-address__address jetpack-address__address1\">10 Street Road</div><div><span class=\"jetpack-address__city\">City</span>, <span class=\"jetpack-address__region\"></span> <span class=\"jetpack-address__postal\">10100</span></div><div class=\"jetpack-address__country\">USA</div></div>\n<!-- /wp:jetpack/address -->\n\n<!-- wp:jetpack/email {\"email\":\"mail@example.com\"} -->\n<div class=\"wp-block-jetpack-email\"><a href=\"mailto:mail@example.com\">mail@example.com</a></div>\n<!-- /wp:jetpack/email -->\n\n<!-- wp:jetpack/phone {\"phone\":\"(555) 555 1234\"} -->\n<div class=\"wp-block-jetpack-phone\"><a href=\"tel:5555551234\">(555) 555 1234</a></div>\n<!-- /wp:jetpack/phone --></div>\n<!-- /wp:jetpack/contact-info --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:jetpack/contact-form -->\n<!-- wp:jetpack/field-name {\"required\":true} /-->\n\n<!-- wp:jetpack/field-email {\"label\":\"Email\",\"required\":true} /-->\n\n<!-- wp:jetpack/field-url /-->\n\n<!-- wp:jetpack/field-textarea {\"required\":true} /-->\n<!-- /wp:jetpack/contact-form --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->",
+            "post_name": "contact",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 26,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "ホーム",
+            "post_content": "<!-- wp:group {\"backgroundColor\":\"background\",\"align\":\"full\"} -->\n<div class=\"wp-block-group alignfull has-background-background-color has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:coblocks/gallery-masonry {\"linkTo\":\"media\",\"align\":\"full\",\"gutter\":30,\"gridSize\":\"lrg\"} -->\n<div class=\"wp-block-coblocks-gallery-masonry alignfull\"><div class=\"coblocks-gallery has-caption-style-dark has-gutter\"><ul class=\"has-grid-lrg has-gutter-30 has-gutter-mobile-15\"><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg?w=683\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg?w=683\" alt=\"\" data-id=\"100\" data-link=\"https://maylanddemo.wordpress.com/home/yannes-kiefer-vzfsq4tqthy-unsplash-minified/\" class=\"wp-image-100\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"102\" data-link=\"https://maylanddemo.wordpress.com/home/eddy-klaus-bhnxfaencti-unsplash-minified/\" class=\"wp-image-102\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg?w=682\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg?w=682\" alt=\"\" data-id=\"103\" data-link=\"https://maylanddemo.wordpress.com/home/paola-aguilar-lkqhgsvzfsk-unsplash-minified/\" class=\"wp-image-103\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg?w=684\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg?w=684\" alt=\"\" data-id=\"104\" data-link=\"https://maylanddemo.wordpress.com/home/nino-ubezio-2580l2jw4qk-unsplash-minified/\" class=\"wp-image-104\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"105\" data-link=\"https://maylanddemo.wordpress.com/home/griffin-taylor-fwzg7xfav-w-unsplash-minified/\" class=\"wp-image-105\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"106\" data-link=\"https://maylanddemo.wordpress.com/home/jeison-higuita-80meoxgb0n0-unsplash-minified/\" class=\"wp-image-106\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg?w=683\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg?w=683\" alt=\"\" data-id=\"107\" data-link=\"https://maylanddemo.wordpress.com/home/rene-bohmer-1odk5-rmata-unsplash-minified/\" class=\"wp-image-107\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg?w=684\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg?w=684\" alt=\"\" data-id=\"108\" data-link=\"https://maylanddemo.wordpress.com/home/steve-long-k53cu6aycz4-unsplash-minified/\" class=\"wp-image-108\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg?w=724\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg?w=724\" alt=\"\" data-id=\"109\" data-link=\"https://maylanddemo.wordpress.com/home/yoshua-giri-65bbd4hlzgk-unsplash-minified/\" class=\"wp-image-109\"  /></a></figure></li></ul></div></div>\n<!-- /wp:coblocks/gallery-masonry --></div></div>\n<!-- /wp:group -->",
+            "post_name": "home",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 5,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_front_page"
+        },
+        {
+            "post_type": "page",
+            "post_title": "このサイトについて",
+            "post_content": "<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:paragraph {\"fontSize\":\"huge\"} -->\n<p class=\"has-huge-font-size\">私はニューヨークに拠点を置き、世界中で活動する写真家です。</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\">プロとフリーランスの両方の写真の経験を持ち、写真家としての腕前とその姿勢には自信があります。多種多様な10年近くの実務経験があり、あらゆる写真の仕事に迅速かつ効果的に取り組むことができます。フレーミング、照明の選択と設定、高度なシャッターオプションとレンズオプションの判断など、高品質のデジタル写真の撮影に精通しています。ミスを防ぐために、仕事でのやり取りを優先的に行います。長いプロのキャリアと、専任のフリーランスとして写真の理想と忠誠心を併せ持つ写真家です。</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->",
+            "post_name": "about",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "open",
+            "hs_old_id": 1,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "post",
+            "post_title": "バタフライライティング",
+            "post_content": "<!-- wp:paragraph -->\n<p>バタフライライティングは照明を2つだけ使用します。キーライトは、被写体の正面、多くの場合カメラの上方またはわずかに片側にずらした位置に配置し、3灯照明で一般的な位置より少し高く配置します。2つ目の照明はリムライトです。</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>多くの場合、レフ板を被写体の顔の下に置き、補助光を提供して影を和らげます。</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>この照明は、額、鼻の橋、上頬に当たる強い光と、よく蝶のように見える鼻の下のはっきりとした影が特徴で、「バタフライライティング」という名前もそこからきています。</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>バタフライライティングは、ハリウッドスターのポートレートで有名なジョージ・ハレルのお気に入りでした。そのため、このスタイルの照明はしばしばパラマウントライティングとも呼ばれます。</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em><a href=\"https://en.wikipedia.org/wiki/Portrait_photography#Butterfly_lighting\">Wikipedia の記事</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">クリエイティブ・コモンズ表示-継承ライセンス3.0</a>で発行)</em> より</p>\n<!-- /wp:paragraph -->",
+            "post_name": "butterfly-lighting",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 78,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "post",
+            "post_title": "窓からの光を利用したポートレート",
+            "post_content": "<!-- wp:paragraph -->\n<p>窓は、人工光源が発見されるまで、肖像画の光源として何十年も使用されてきました。アーサー・ハモンドは、アマチュアとプロの写真家のポートレート撮影に必要な照明は、窓とレフ板だけだと述べています。窓からの光の場合、人工照明と比較するとポートレート写真の選択肢が制限されますが、アマチュア写真家であればいろいろな撮影にチャレンジすることができます。被写体の顔の暗い側に光が反射されるように白のレフ板を配置すると、コントラストが均一になります。シャッタースピードは通常よりも遅くなる場合があるため、三脚が必要になりますが、柔らかくて豊かな美しいライティングになります。</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>窓からの光によるポートレート撮影に最適な時間は、窓からの光が強くなる朝の早い時間か午後の遅い時間とされています。カーテン、レフ板、強度低減するための遮蔽板を使用すると、光を柔らかくすることができます。鏡やガラスを使用するとハイキーな照明にすることができます。時々、色付きのガラス、フィルター、反射物を使用すると、ポートレートに希望の色効果を加えることができます。影と柔らかな光の組み合わせにより、ウィンドウライトのポートレートは、人工光で作成されたポートレートとはまったく異なる効果をもたらします。</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em><a href=\"https://en.wikipedia.org/wiki/Portrait_photography#Windowlight_portraiture\">Wikipedia の記事</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">クリエイティブ・コモンズ表示-継承ライセンス3.0</a>で発行)</em> より</p>\n<!-- /wp:paragraph -->",
+            "post_name": "windowlight-portraiture",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 72,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        }
+    ],
+    "menus": {
+        "primary": {
+            "name": "メイン",
+            "items": [
+                {
+                    "menu-item-title": "ホーム",
+                    "menu-item-db-id": 29,
+                    "menu-item-object-id": "5",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 1,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "このサイトについて",
+                    "menu-item-db-id": 31,
+                    "menu-item-object-id": "1",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 2,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "ブログ",
+                    "menu-item-db-id": 53,
+                    "menu-item-object-id": "51",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 3,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "お問い合わせ",
+                    "menu-item-db-id": 30,
+                    "menu-item-object-id": "26",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 4,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                }
+            ]
+        },
+        "social-links": {
+            "name": "ソーシャルリンク",
+            "items": [
+                {
+                    "menu-item-title": "Instagram",
+                    "menu-item-db-id": 33,
+                    "menu-item-object-id": "33",
+                    "menu-item-object": "custom",
+                    "menu-item-type": "custom",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 1,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": "",
+                    "menu-item-url": "http://instagram.com"
+                },
+                {
+                    "menu-item-title": "Twitter",
+                    "menu-item-db-id": 34,
+                    "menu-item-object-id": "34",
+                    "menu-item-object": "custom",
+                    "menu-item-type": "custom",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 2,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": "",
+                    "menu-item-url": "http://twitter.com"
+                }
+            ]
+        }
+    },
+    "images": [
+        "https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/mayland-logo-small.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo_m-1.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo_m.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-logo_mayland.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_theme_logo.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-eddy-klaus-bhnxfaencti-unsplash.jpg"
+    ]
+}

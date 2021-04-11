@@ -1,0 +1,245 @@
+{
+    "settings": {
+        "options": {
+            "show_on_front": "page",
+            "featured-content": false
+        },
+        "theme_mods": {
+            "0": false,
+            "nav_menu_locations": {
+                "menu-1": "primary",
+                "social": "social-links",
+                "menu-2": "primary"
+            },
+            "custom_css_post_id": -1,
+            "hide_front_page_title": true,
+            "custom_logo": ""
+        },
+        "headstart": {
+            "mapped_id_options": [],
+            "mapped_id_theme_mods": [],
+            "keep_submenu_items": true
+        }
+    },
+    "widgets": [],
+    "content": [
+        {
+            "post_type": "post",
+            "post_title": "Cómo superar las limitaciones de la profundidad de campo",
+            "post_content": "<!-- wp:paragraph -->\n<p>Existen métodos y equipos que permiten alterar la profundidad de campo visible, y algunos de ellos incluso permiten definir la profundidad de campo después de hacer la fotografía. Por ejemplo, en el apilamiento de enfoque se combinan varias imágenes enfocadas en distintos planos, con lo que se obtiene una imagen con una profundidad de campo visible mayor (o menor, si así se desea) que ninguna de las imágenes individuales de origen. De forma similar, para reconstruir la forma tridimensional de un objeto puede generarse un mapa de profundidad a partir de varias fotografías que tengan una profundidad de campo distinta. Este método se llama “formas a partir del enfoque”.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Otras tecnologías se sirven de una combinación de diseño de la lente y postratamiento: La codificación de frente de onda es un método con el que se añaden aberraciones controladas al sistema óptico de forma que el enfoque y la profundidad de campo puedan mejorarse más adelante.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em>Traducido del artículo de Wikipedia <a href=\"https://en.wikipedia.org/wiki/Depth_of_field#Overcoming_DOF_limitations\"></a>, publicado bajo licencia&nbsp;<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-Share-Alike 3.0.</a></em></p>\n<!-- /wp:paragraph -->",
+            "post_name": "overcoming-depth-of-field-limitations",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 69,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Blog",
+            "post_content": "",
+            "post_name": "blog",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 51,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_blog_page"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Contacto",
+            "post_content": "<!-- wp:columns {\"className\":\"has-2-columns\"} -->\n<div class=\"wp-block-columns has-2-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:jetpack/contact-info -->\n<div class=\"wp-block-jetpack-contact-info\"><!-- wp:jetpack/address {\"address\":\"10 Street Road\",\"city\":\"City\",\"postal\":\"10100\",\"country\":\"USA\"} -->\n<div class=\"wp-block-jetpack-address\"><div class=\"jetpack-address__address jetpack-address__address1\">Calle de ejemplo, 10</div><div><span class=\"jetpack-address__city\">Ciudad</span>, <span class=\"jetpack-address__region\"></span> <span class=\"jetpack-address__postal\">10100</span></div><div class=\"jetpack-address__country\">EUA</div></div>\n<!-- /wp:jetpack/address -->\n\n<!-- wp:jetpack/email {\"email\":\"mail@example.com\"} -->\n<div class=\"wp-block-jetpack-email\"><a href=\"mailto:mail@example.com\">correoelectronico@ejemplo.com</a></div>\n<!-- /wp:jetpack/email -->\n\n<!-- wp:jetpack/phone {\"phone\":\"(555) 555 1234\"} -->\n<div class=\"wp-block-jetpack-phone\"><a href=\"tel:5555551234\">555 555 1234</a></div>\n<!-- /wp:jetpack/phone --></div>\n<!-- /wp:jetpack/contact-info --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:jetpack/contact-form -->\n<!-- wp:jetpack/field-name {\"required\":true} /-->\n\n<!-- wp:jetpack/field-email {\"label\":\"Email\",\"required\":true} /-->\n\n<!-- wp:jetpack/field-url /-->\n\n<!-- wp:jetpack/field-textarea {\"required\":true} /-->\n<!-- /wp:jetpack/contact-form --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->",
+            "post_name": "contact",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 26,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Página de inicio",
+            "post_content": "<!-- wp:group {\"backgroundColor\":\"background\",\"align\":\"full\"} -->\n<div class=\"wp-block-group alignfull has-background-background-color has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:coblocks/gallery-masonry {\"linkTo\":\"media\",\"align\":\"full\",\"gutter\":30,\"gridSize\":\"lrg\"} -->\n<div class=\"wp-block-coblocks-gallery-masonry alignfull\"><div class=\"coblocks-gallery has-caption-style-dark has-gutter\"><ul class=\"has-grid-lrg has-gutter-30 has-gutter-mobile-15\"><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg?w=683\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg?w=683\" alt=\"\" data-id=\"100\" data-link=\"https://maylanddemo.wordpress.com/home/yannes-kiefer-vzfsq4tqthy-unsplash-minified/\" class=\"wp-image-100\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"102\" data-link=\"https://maylanddemo.wordpress.com/home/eddy-klaus-bhnxfaencti-unsplash-minified/\" class=\"wp-image-102\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg?w=682\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg?w=682\" alt=\"\" data-id=\"103\" data-link=\"https://maylanddemo.wordpress.com/home/paola-aguilar-lkqhgsvzfsk-unsplash-minified/\" class=\"wp-image-103\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg?w=684\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg?w=684\" alt=\"\" data-id=\"104\" data-link=\"https://maylanddemo.wordpress.com/home/nino-ubezio-2580l2jw4qk-unsplash-minified/\" class=\"wp-image-104\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"105\" data-link=\"https://maylanddemo.wordpress.com/home/griffin-taylor-fwzg7xfav-w-unsplash-minified/\" class=\"wp-image-105\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg?w=750\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg?w=750\" alt=\"\" data-id=\"106\" data-link=\"https://maylanddemo.wordpress.com/home/jeison-higuita-80meoxgb0n0-unsplash-minified/\" class=\"wp-image-106\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg?w=683\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg?w=683\" alt=\"\" data-id=\"107\" data-link=\"https://maylanddemo.wordpress.com/home/rene-bohmer-1odk5-rmata-unsplash-minified/\" class=\"wp-image-107\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg?w=684\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg?w=684\" alt=\"\" data-id=\"108\" data-link=\"https://maylanddemo.wordpress.com/home/steve-long-k53cu6aycz4-unsplash-minified/\" class=\"wp-image-108\"  /></a></figure></li><li class=\"coblocks-gallery--item\"><figure class=\"coblocks-gallery--figure\"><a href=\"https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg?w=724\" rel=\"\"><img src=\"https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg?w=724\" alt=\"\" data-id=\"109\" data-link=\"https://maylanddemo.wordpress.com/home/yoshua-giri-65bbd4hlzgk-unsplash-minified/\" class=\"wp-image-109\"  /></a></figure></li></ul></div></div>\n<!-- /wp:coblocks/gallery-masonry --></div></div>\n<!-- /wp:group -->",
+            "post_name": "home",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 5,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_front_page"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Nuestra historia",
+            "post_content": "<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:paragraph {\"fontSize\":\"huge\"} -->\n<p class=\"has-huge-font-size\">Soy un fotógrafo de Nueva York y trabajo por todo el mundo.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\">La seguridad y la dedicación son dos de las cualidades de este fotógrafo con experiencia tanto en la fotografía profesional como por cuenta propia. Cuenta con casi 10 años de experiencia en proyectos muy variados para poder encargarse de cualquier trabajo fotográfico de forma rápida y eficaz. Conoce todos los secretos de la fotografía digital de alta calidad, lo que incluye el encuadre, la selección y preparación de la iluminación, y la elección de opciones avanzadas de objetivo y obturador. En los proyectos, su prioridad es la comunicación para evitar errores. Se trata de un candidato con una extensa carrera profesional y, a la vez, con los ideales y la lealtad de un fotógrafo que trabaja por cuenta propia.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->",
+            "post_name": "about",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "open",
+            "hs_old_id": 1,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "post",
+            "post_title": "Iluminación de mariposa",
+            "post_content": "<!-- wp:paragraph -->\n<p>En la iluminación de mariposa solo se utilizan dos luces. La luz principal se coloca justo enfrente del sujeto, a menudo por encima de la cámara o ligeramente a un lado, y un poco más arriba de lo habitual en una iluminación de tres puntos. La segunda luz es una luz de contorno.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>A menudo se coloca un reflector bajo la cara del sujeto para obtener luz de relleno y suavizar las sombras.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Esta iluminación puede identificarse por la potente luz que cae sobre la frente, el puente nasal y la parte superior de las mejillas, y por la marcada sombra bajo la nariz que a menudo parece una mariposa, lo que da nombre a esta técnica de iluminación.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>La iluminación de mariposa era la favorita del famoso retratista de Hollywood George Hurrell. Por este motivo, este estilo de iluminación también suele denominarse iluminación Paramount.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em>Traducido del artículo de Wikipedia <a href=\"https://en.wikipedia.org/wiki/Portrait_photography#Butterfly_lighting\"></a>, publicado bajo licencia&nbsp;<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-Share-Alike 3.0.</a></em></p>\n<!-- /wp:paragraph -->",
+            "post_name": "butterfly-lighting",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 78,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "post",
+            "post_title": "Retratos con la luz de una ventana",
+            "post_content": "<!-- wp:paragraph -->\n<p>Antes de que se crearan las fuentes de luz artificiales, durante décadas se usaron las ventanas como fuente de luz para los retratos. Según Arthur Hammond, tanto los fotógrafos aficionados como los profesionales solo necesitan dos cosas para iluminar un retrato: una ventana y un reflector. A pesar de que la luz de las ventanas limita las opciones para fotografiar retratos en comparación con la luz artificial, ofrece a los fotógrafos aficionados una infinidad de posibilidades de experimentar. Si se coloca un reflector blanco que refleje la luz en el lado más oscuro de la cara del sujeto, el contraste se igualará. Puede que la velocidad de obturación sea más lenta de lo normal y que haga falta un trípode, pero se obtendrá una iluminación suave y repleta de detalles.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Se dice que las mejores horas para hacer retratos con la luz de una ventana son las primeras horas del día y las últimas de la tarde, cuando la luz penetra más intensamente por las ventanas. Para obtener una iluminación suave, se utilizan cortinas, reflectores y pantallas que reduzcan la intensidad de la luz. Y si lo que se busca es una iluminación en clave alta, pueden usarse espejos y cristales. A veces también pueden usarse cristales de colores, filtros y objetos reflectantes para dar al retrato los efectos de color deseados. La composición de las sombras con la iluminación suave aporta a los retratos hechos con la luz de una ventana un efecto característico que los distingue de los retratos hechos con luces artificiales.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"fontSize\":\"small\"} -->\n<p class=\"has-small-font-size\"><em>Traducido del artículo de Wikipedia <a href=\"https://en.wikipedia.org/wiki/Portrait_photography#Windowlight_portraiture\"></a>, publicado bajo licencia&nbsp;<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-Share-Alike 3.0.</a></em></p>\n<!-- /wp:paragraph -->",
+            "post_name": "windowlight-portraiture",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "hs_old_id": 72,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra"
+        }
+    ],
+    "menus": {
+        "primary": {
+            "name": "Primario",
+            "items": [
+                {
+                    "menu-item-title": "Página de inicio",
+                    "menu-item-db-id": 29,
+                    "menu-item-object-id": "5",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 1,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "Nuestra historia",
+                    "menu-item-db-id": 31,
+                    "menu-item-object-id": "1",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 2,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "Blog",
+                    "menu-item-db-id": 53,
+                    "menu-item-object-id": "51",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 3,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                },
+                {
+                    "menu-item-title": "Contacto",
+                    "menu-item-db-id": 30,
+                    "menu-item-object-id": "26",
+                    "menu-item-object": "page",
+                    "menu-item-type": "post_type",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 4,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": ""
+                }
+            ]
+        },
+        "social-links": {
+            "name": "Enlaces con redes sociales",
+            "items": [
+                {
+                    "menu-item-title": "Instagram",
+                    "menu-item-db-id": 33,
+                    "menu-item-object-id": "33",
+                    "menu-item-object": "custom",
+                    "menu-item-type": "custom",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 1,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": "",
+                    "menu-item-url": "http://instagram.com"
+                },
+                {
+                    "menu-item-title": "Twitter",
+                    "menu-item-db-id": 34,
+                    "menu-item-object-id": "34",
+                    "menu-item-object": "custom",
+                    "menu-item-type": "custom",
+                    "menu-item-status": "publish",
+                    "menu-item-position": 2,
+                    "menu-item-parent-id": "0",
+                    "menu-item-description": "",
+                    "menu-item-url": "http://twitter.com"
+                }
+            ]
+        }
+    },
+    "images": [
+        "https://maylanddemo.files.wordpress.com/2019/09/yoshua-giri-65bbd4hlzgk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/steve-long-k53cu6aycz4-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/rene-bohmer-1odk5-rmata-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/jeison-higuita-80meoxgb0n0-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/griffin-taylor-fwzg7xfav-w-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/nino-ubezio-2580l2jw4qk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/paola-aguilar-lkqhgsvzfsk-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/eddy-klaus-bhnxfaencti-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/yannes-kiefer-vzfsq4tqthy-unsplash-minified.jpg",
+        "https://maylanddemo.files.wordpress.com/2019/09/mayland-logo-small.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo_m-1.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo_m.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-logo_mayland.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_theme_logo.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-mayland_logo.png",
+        "https://maylanddemo.files.wordpress.com/2019/09/cropped-eddy-klaus-bhnxfaencti-unsplash.jpg"
+    ]
+}

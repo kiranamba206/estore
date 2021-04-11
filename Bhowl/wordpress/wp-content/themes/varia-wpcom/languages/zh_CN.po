@@ -1,0 +1,388 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress.com - Themes - Varia\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-03T02:03:52+00:00\n"
+"PO-Revision-Date: 2021-03-02 11:14:20+0000\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+
+#: inc/wpcom-colors.php:216
+#: inc/wpcom-editor-colors.php:153
+msgid "Link Color"
+msgstr "链接颜色"
+
+#: inc/wpcom-colors.php:365
+#: inc/wpcom-editor-colors.php:229
+msgid "Text Color"
+msgstr "文本颜色"
+
+#: inc/wpcom-colors.php:381
+#: inc/wpcom-editor-colors.php:245
+msgid "Secondary Color"
+msgstr "次级颜色"
+
+#: inc/wpcom.php:61
+msgid "In order to ensure people can read your site, try to maintain a strong contrast ratio between the colors you choose here. <a href=\"%s\" target=\"_blank\">Learn more about color contrast</a>."
+msgstr "为确保读者易于阅读你的站点，请力求在选取配色时维持高对比。 <a href=\"%s\" target=\"_blank\">进一步了解色彩对比。 </a>"
+
+#: inc/wpcom.php:59
+msgid "Color Accessibility Warning"
+msgstr "颜色可及性警告"
+
+#: functions.php:169
+msgid "Foreground"
+msgstr "前景"
+
+#: functions.php:174
+msgid "Background"
+msgstr "背景"
+
+#: inc/wpcom-colors.php:96
+#: inc/wpcom-editor-colors.php:82
+msgid "Background Color"
+msgstr "背景颜色"
+
+#: inc/woocommerce.php:212
+msgid "View your shopping list"
+msgstr "检视购物清单"
+
+#. translators: %s: Name of current post.
+#: inc/template-functions.php:182
+msgid "Continue reading %s"
+msgstr "继续阅读%s"
+
+#: inc/woocommerce.php:208
+msgid "Cart"
+msgstr "购物车"
+
+#: inc/woocommerce.php:103
+#: inc/woocommerce.php:211
+msgid "View your shopping cart"
+msgstr "查看购物车"
+
+#: inc/woocommerce.php:106
+#: inc/woocommerce.php:142
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d 个项目"
+
+#: image.php:25
+msgid "Previous Image"
+msgstr "上一图片"
+
+#: image.php:26
+msgid "Next Image"
+msgstr "下一张图片"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/content-single.php:33
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "继续阅读<span class=\"screen-reader-text\">“%s”</span>"
+
+#. translators: %s: post author
+#: template-parts/post/author-bio.php:17
+msgid "Published by %s"
+msgstr "发布者：%s"
+
+#: template-parts/post/author-bio.php:26
+msgid "View more posts"
+msgstr "查看更多文章"
+
+#: template-parts/content/content-none.php:39
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
+
+#: template-parts/content/content-none.php:46
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "看来我们无法找到您想查找的内容。或许搜索可以帮助您。"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content/content-none.php:26
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好发布第一篇文章了？<a href=\"%1$s\">从这里开始</a>。"
+
+#: single.php:38
+msgid "Next Post"
+msgstr "下一篇文章"
+
+#: single.php:39
+msgid "Next post:"
+msgstr "下篇文章："
+
+#: single.php:41
+msgid "Previous Post"
+msgstr "上一篇文章"
+
+#: single.php:42
+msgid "Previous post:"
+msgstr "上篇文章："
+
+#: template-parts/content/content-excerpt.php:18
+#: template-parts/content/content-testimonial-excerpt.php:18
+#: template-parts/content/content.php:18
+msgctxt "post"
+msgid "Featured"
+msgstr "特色"
+
+#: template-parts/content/content-none.php:16
+msgid "Nothing Found"
+msgstr "没有找到任何内容"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:120
+#: inc/template-tags.php:185
+#: template-parts/content/content-page.php:40
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "编辑<span class=\"screen-reader-text\">%s</span>"
+
+#: inc/template-tags.php:294
+msgid "Newer posts"
+msgstr "较新文章"
+
+#: inc/template-tags.php:298
+msgid "Older posts"
+msgstr "较旧的文章"
+
+#. translators: 1: search result title. 2: search term.
+#: search.php:25
+msgid "Search results for:"
+msgstr "针对以下查询的搜索结果："
+
+#: inc/wpcom.php:49
+msgid "Check to hide the page title, if your homepage is set to display a static page."
+msgstr "如果你的首页选择显示静态页面，勾选这个选项，就不会显示首页标题。"
+
+#: inc/wpcom.php:48
+msgid "Hide Homepage Title"
+msgstr "隐藏首页标题"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:63
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "<span class=\"screen-reader-text\">于%s</span>留下评论"
+
+#. translators: used between list items, there is a space after the comma.
+#: inc/template-tags.php:86
+#: inc/template-tags.php:98
+#: inc/template-tags.php:151
+#: inc/template-tags.php:163
+msgid ", "
+msgstr "、"
+
+#. translators: 1: SVG icon. 2: posted in label, only visible to screen
+#. readers. 3: list of categories.
+#: inc/template-tags.php:92
+#: inc/template-tags.php:157
+msgid "Posted in"
+msgstr "发表在"
+
+#. translators: 1: SVG icon. 2: posted in label, only visible to screen
+#. readers. 3: list of tags.
+#: inc/template-tags.php:104
+#: inc/template-tags.php:169
+msgid "Tags:"
+msgstr "标签："
+
+#: inc/template-functions.php:94
+msgid "Monthly Archives: "
+msgstr "每月存档："
+
+#: inc/template-functions.php:94
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Y年n月"
+
+#: inc/template-functions.php:96
+msgid "Daily Archives: "
+msgstr "每日存档："
+
+#. translators: %s: Post type singular name
+#. translators: %s: Taxonomy singular name
+#: inc/template-functions.php:100
+#: inc/template-functions.php:106
+msgid "%s Archives"
+msgstr "%s存档："
+
+#: inc/template-functions.php:110
+msgid "Archives:"
+msgstr "文章："
+
+#. translators: 1: SVG icon. 2: post author, only visible to screen readers. 3:
+#. author link.
+#: inc/template-tags.php:46
+msgid "Posted by"
+msgstr "作者"
+
+#: image.php:76
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr "原始尺寸"
+
+#: image.php:93
+msgctxt "Parent post link"
+msgid "<span class=\"meta-nav\">Published in</span><br><span class=\"post-title\">%title</span>"
+msgstr "<span class=\"meta-nav\">发布于</span><br><span class=\"post-title\">%title</span>"
+
+#: inc/template-functions.php:86
+msgid "Category Archives: "
+msgstr "分类存档："
+
+#: inc/template-functions.php:88
+msgid "Tag Archives: "
+msgstr "标签存档："
+
+#: inc/template-functions.php:90
+msgid "Author Archives: "
+msgstr "作者存档："
+
+#: inc/template-functions.php:92
+msgid "Yearly Archives: "
+msgstr "每年存档："
+
+#: inc/template-functions.php:92
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y年"
+
+#: image.php:58
+#: template-parts/content/content-page.php:26
+#: template-parts/content/content-single.php:46
+#: template-parts/content/content.php:36
+msgid "Pages:"
+msgstr "页码："
+
+#: image.php:62
+msgid "Page"
+msgstr "页"
+
+#: header.php:60
+#: inc/woocommerce.php:210
+msgid "collapsed"
+msgstr "收合"
+
+#: header.php:59
+#: inc/woocommerce.php:209
+msgid "expanded"
+msgstr "展开"
+
+#: header.php:36
+msgid "Skip to content"
+msgstr "跳转到内容"
+
+#: header.php:52
+msgid "Main Navigation"
+msgstr "主要导航"
+
+#: header.php:56
+msgid "Menu"
+msgstr "选单"
+
+#: functions.php:205
+#: template-parts/footer/footer-widgets.php:12
+msgid "Footer"
+msgstr "页脚"
+
+#: functions.php:207
+msgid "Add widgets here to appear in your footer."
+msgstr "在此向页脚中添加挂件。"
+
+#: functions.php:118
+msgid "S"
+msgstr "S"
+
+#: functions.php:123
+msgid "Normal"
+msgstr "正常"
+
+#: functions.php:124
+msgid "M"
+msgstr "M"
+
+#: functions.php:129
+msgid "Large"
+msgstr "大"
+
+#: functions.php:130
+msgid "L"
+msgstr "L"
+
+#: functions.php:135
+msgid "Huge"
+msgstr "巨大"
+
+#: functions.php:136
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:164
+msgid "Secondary"
+msgstr "次要"
+
+#. translators: 1: WordPress link, 2: WordPress.
+#: footer.php:50
+msgid "https://wordpress.org/"
+msgstr "http://cn.wordpress.org/"
+
+#: functions.php:59
+#: functions.php:159
+msgid "Primary"
+msgstr "主要"
+
+#: footer.php:29
+#: functions.php:60
+msgid "Footer Menu"
+msgstr "页脚菜单"
+
+#: functions.php:61
+#: header.php:78
+msgid "Social Links Menu"
+msgstr "社交网络链接菜单"
+
+#: functions.php:117
+msgid "Small"
+msgstr "小"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "《%2$s》有%1$s个想法"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#: classes/class-varia-walker-comment.php:100
+msgid "Your comment is awaiting moderation."
+msgstr "您的评论正在等待管理员的审核。"
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "这儿似乎什么都没有，试试搜索？"
+
+#. translators: %s: comment author link
+#: classes/class-varia-walker-comment.php:67
+msgid "%s <span class=\"screen-reader-text says\">says:</span>"
+msgstr "%s<span class=\"screen-reader-text says\">说：</span>"
+
+#. translators: 1: comment date, 2: comment time
+#: classes/class-varia-walker-comment.php:87
+msgid "%1$s at %2$s"
+msgstr "%1$s @ %2$s"
+
+#: classes/class-varia-walker-comment.php:95
+msgid "Edit"
+msgstr "编辑"
+
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "有点尴尬诶！该页无法显示。"

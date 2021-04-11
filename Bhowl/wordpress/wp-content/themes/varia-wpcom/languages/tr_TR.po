@@ -1,0 +1,380 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress.com - Themes - Varia\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-05T02:05:10+00:00\n"
+"PO-Revision-Date: 2021-03-04 09:49:22+0000\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+
+#: inc/wpcom-colors.php:216
+#: inc/wpcom-editor-colors.php:153
+msgid "Link Color"
+msgstr "Bağlantı Rengi"
+
+#: inc/wpcom-colors.php:365
+#: inc/wpcom-editor-colors.php:229
+msgid "Text Color"
+msgstr "Metin rengi"
+
+#: inc/wpcom-colors.php:381
+#: inc/wpcom-editor-colors.php:245
+msgid "Secondary Color"
+msgstr "İkincil Renk"
+
+#: inc/wpcom.php:61
+msgid "In order to ensure people can read your site, try to maintain a strong contrast ratio between the colors you choose here. <a href=\"%s\" target=\"_blank\">Learn more about color contrast</a>."
+msgstr "İnsanların sitenizi okuyabilmesi için burada seçtiğiniz renkler arasında güçlü bir kontrast oranını korumaya çalışın. <a href=\"%s\" target=\"_blank\">Renk kontrastı hakkında daha fazla bilgi edinin.</a>"
+
+#: inc/wpcom.php:59
+msgid "Color Accessibility Warning"
+msgstr "Renk Erişilebilirliği Uyarısı"
+
+#: functions.php:169
+msgid "Foreground"
+msgstr "Önplan"
+
+#: functions.php:174
+msgid "Background"
+msgstr "Arkaplan"
+
+#: inc/wpcom-colors.php:96
+#: inc/wpcom-editor-colors.php:82
+msgid "Background Color"
+msgstr "Arka Plan Rengi"
+
+#: inc/woocommerce.php:212
+msgid "View your shopping list"
+msgstr "Alışveriş listenize bakın"
+
+#. translators: %s: Name of current post.
+#: inc/template-functions.php:182
+msgid "Continue reading %s"
+msgstr "%s yazısının devamını oku"
+
+#: inc/woocommerce.php:103
+#: inc/woocommerce.php:211
+msgid "View your shopping cart"
+msgstr "Alışveriş sepetinizi görüntüleyin"
+
+#: inc/woocommerce.php:208
+msgid "Cart"
+msgstr "Sepet"
+
+#: inc/woocommerce.php:106
+#: inc/woocommerce.php:142
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d öğe"
+msgstr[1] "%d öğe"
+
+#: image.php:25
+msgid "Previous Image"
+msgstr "Önceki Görüntü"
+
+#: image.php:26
+msgid "Next Image"
+msgstr "Sonraki Görüntü"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/content-single.php:33
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "<span class=\"screen-reader-text\"> \"%s\"</span> okumaya devam et"
+
+#. translators: %s: post author
+#: template-parts/post/author-bio.php:17
+msgid "Published by %s"
+msgstr "%s tarafından yayımlandı"
+
+#: template-parts/post/author-bio.php:26
+msgid "View more posts"
+msgstr "Daha fazla yazı görüntüle"
+
+#: template-parts/content/content-none.php:39
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Üzgünüz fakat aradığınız kriterler ile örtüşen sonuç bulunamadı. Lütfen başka kriterler ile tekrar deneyin."
+
+#: template-parts/content/content-none.php:46
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Aradığınız sayfa bulunamadı. Belki arama kutusu aradığınızı bulma konusunda yardımcı olabilir."
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content/content-none.php:26
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "İlk yazınızı yayınlamaya hazır mısınız? <a href=\"%1$s\">Buradan başlayın</a>."
+
+#: single.php:38
+msgid "Next Post"
+msgstr "Sonraki Yazı"
+
+#: single.php:39
+msgid "Next post:"
+msgstr "Sıradaki Yazı:"
+
+#: single.php:41
+msgid "Previous Post"
+msgstr "Önceki Yazı"
+
+#: single.php:42
+msgid "Previous post:"
+msgstr "Önceki yazı:"
+
+#: template-parts/content/content-excerpt.php:18
+#: template-parts/content/content-testimonial-excerpt.php:18
+#: template-parts/content/content.php:18
+msgctxt "post"
+msgid "Featured"
+msgstr "Öne çıkan"
+
+#: template-parts/content/content-none.php:16
+msgid "Nothing Found"
+msgstr "Hiçbir şey bulunmadı"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:120
+#: inc/template-tags.php:185
+#: template-parts/content/content-page.php:40
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Düzenle <span class=\"screen-reader-text\">%s</span>"
+
+#: inc/template-tags.php:294
+msgid "Newer posts"
+msgstr "Daha yeni yazılar"
+
+#: inc/template-tags.php:298
+msgid "Older posts"
+msgstr "Daha eski yazılar"
+
+#. translators: 1: search result title. 2: search term.
+#: search.php:25
+msgid "Search results for:"
+msgstr "Arama sonuçları:"
+
+#: inc/wpcom.php:49
+msgid "Check to hide the page title, if your homepage is set to display a static page."
+msgstr "Ana sayfanız statik sayfa olarak ayarlandıysa, sayfa başlığını gizlemek için burayı işaretleyin."
+
+#: inc/wpcom.php:48
+msgid "Hide Homepage Title"
+msgstr "Ana Sayfa Başlığını Gizle"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:63
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "<span class=\"screen-reader-text\">%s için</span> bir yorum bırak"
+
+#. translators: used between list items, there is a space after the comma.
+#: inc/template-tags.php:86
+#: inc/template-tags.php:98
+#: inc/template-tags.php:151
+#: inc/template-tags.php:163
+msgid ", "
+msgstr ", "
+
+#. translators: 1: SVG icon. 2: posted in label, only visible to screen
+#. readers. 3: list of categories.
+#: inc/template-tags.php:92
+#: inc/template-tags.php:157
+msgid "Posted in"
+msgstr "Yazı kategorisi "
+
+#. translators: 1: SVG icon. 2: posted in label, only visible to screen
+#. readers. 3: list of tags.
+#: inc/template-tags.php:104
+#: inc/template-tags.php:169
+msgid "Tags:"
+msgstr "Etiketler:"
+
+#: inc/template-functions.php:94
+msgid "Monthly Archives: "
+msgstr "Aylık Arşivler:"
+
+#: inc/template-functions.php:94
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: inc/template-functions.php:96
+msgid "Daily Archives: "
+msgstr "Günlük Arşivler:"
+
+#. translators: %s: Post type singular name
+#. translators: %s: Taxonomy singular name
+#: inc/template-functions.php:100
+#: inc/template-functions.php:106
+msgid "%s Archives"
+msgstr "%s arşivleri:"
+
+#: inc/template-functions.php:110
+msgid "Archives:"
+msgstr "Arşivler"
+
+#. translators: 1: SVG icon. 2: post author, only visible to screen readers. 3:
+#. author link.
+#: inc/template-tags.php:46
+msgid "Posted by"
+msgstr "Yazan:"
+
+#: image.php:76
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr "Tam boyut"
+
+#: image.php:93
+msgctxt "Parent post link"
+msgid "<span class=\"meta-nav\">Published in</span><br><span class=\"post-title\">%title</span>"
+msgstr "<span class=\"meta-nav\">içinde yayınlandı</span><br><span class=\"post-title\">%title</span>"
+
+#: inc/template-functions.php:86
+msgid "Category Archives: "
+msgstr "Kategori arşivleri"
+
+#: inc/template-functions.php:88
+msgid "Tag Archives: "
+msgstr "Etiket arşivleri: "
+
+#: inc/template-functions.php:90
+msgid "Author Archives: "
+msgstr "Yazar arşivleri: "
+
+#: inc/template-functions.php:92
+msgid "Yearly Archives: "
+msgstr "Yıllık Arşivler:"
+
+#: inc/template-functions.php:92
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: image.php:58
+#: template-parts/content/content-page.php:26
+#: template-parts/content/content-single.php:46
+#: template-parts/content/content.php:36
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: image.php:62
+msgid "Page"
+msgstr "Sayfa"
+
+#: header.php:36
+msgid "Skip to content"
+msgstr "İçeriğe atla"
+
+#: header.php:52
+msgid "Main Navigation"
+msgstr "Ana Gezinti Çubuğu"
+
+#: header.php:56
+msgid "Menu"
+msgstr "Menü"
+
+#: functions.php:205
+#: template-parts/footer/footer-widgets.php:12
+msgid "Footer"
+msgstr "Alt Kısım"
+
+#: functions.php:207
+msgid "Add widgets here to appear in your footer."
+msgstr "Alt alanda gözükmek üzere buraya bileşenler ekleyin."
+
+#: functions.php:118
+msgid "S"
+msgstr "C"
+
+#: functions.php:123
+msgid "Normal"
+msgstr "Olağan"
+
+#: functions.php:124
+msgid "M"
+msgstr "M"
+
+#: functions.php:129
+msgid "Large"
+msgstr "Büyük"
+
+#: functions.php:130
+msgid "L"
+msgstr "L"
+
+#: functions.php:135
+msgid "Huge"
+msgstr "Kocaman"
+
+#: functions.php:136
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:164
+msgid "Secondary"
+msgstr "İkincil"
+
+#. translators: 1: WordPress link, 2: WordPress.
+#: footer.php:50
+msgid "https://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: functions.php:59
+#: functions.php:159
+msgid "Primary"
+msgstr "Birincil"
+
+#: footer.php:29
+#: functions.php:60
+msgid "Footer Menu"
+msgstr "Sayfa alt bölüm menüsü"
+
+#: functions.php:61
+#: header.php:78
+msgid "Social Links Menu"
+msgstr "Sosyal bağlantılar menüsü"
+
+#: functions.php:117
+msgid "Small"
+msgstr "Küçük"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; için bir yorum"
+msgstr[1] "&ldquo;%2$s&rdquo; için %1$s yorum"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Yorumlar kapatıldı."
+
+#: classes/class-varia-walker-comment.php:100
+msgid "Your comment is awaiting moderation."
+msgstr "Yorumunuz denetim için bekliyor."
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Burada bir şey bulamadık. Bir de aramayı denemek ister misiniz?"
+
+#. translators: %s: comment author link
+#: classes/class-varia-walker-comment.php:67
+msgid "%s <span class=\"screen-reader-text says\">says:</span>"
+msgstr "%s <span class=\"screen-reader-text says\">diyor ki:</span>"
+
+#. translators: 1: comment date, 2: comment time
+#: classes/class-varia-walker-comment.php:87
+msgid "%1$s at %2$s"
+msgstr "%1$s, %2$s"
+
+#: classes/class-varia-walker-comment.php:95
+msgid "Edit"
+msgstr "Düzenle"
+
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Off! Bu sayfa bulunamadı."
